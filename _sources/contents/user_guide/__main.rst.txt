@@ -1,0 +1,16 @@
+.. todo::
+    We are sorry. This page is under construction!
+
+
+##########
+User Guide
+##########
+
+
+Learn how Jangada Works! Explore the user guide, where you'll find in-depth explanation and best practices.
+
+
+.. toctree::
+    :maxdepth: 2
+
+    serialization/__main

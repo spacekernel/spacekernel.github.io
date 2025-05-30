@@ -1,0 +1,22 @@
+############################################
+Ellipsoid Routines (``mathtools.ellipsoid``)
+############################################
+
+This module provides performance-optimised services regarding complex-valued positive-semidefinite matrices :math:`A^H A` when :math:`A\in\mathbb{C}^{m\times n}` is given.
+
+In several situations one needs to analyse some mathematical properties of square matrices in the form :math:`A^H A \in\mathbb{C}^{n\times n}` where :math:`A\in\mathbb{C}^{m\times n}` is already known. In scenarios like those, the previous knowledge of :math:`A` can be used to increase the performance of the required calculations.
+
+.. Recall that a positive-semidefinite matrix :math:`M` can always be  (refer to `Decomposition of PSDM <https://en.wikipedia.org/wiki/Definite_matrix#Decomposition>`_)
+
+.. currentmodule:: spacekernel.mathtools.ellipsoid
+
+.. toctree::
+    :hidden:
+    :maxdepth: 1
+    :caption: Mathtools
+
+    Ellipsoid
+
+.. autosummary::
+
+    Ellipsoid

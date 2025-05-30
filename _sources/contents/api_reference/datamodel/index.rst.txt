@@ -1,0 +1,61 @@
+Data-Type Definitions (``spacekernel.datamodel``)
+-------------------------------------------------
+
+
+.. data:: SurfCoord_dtype
+
+   **Type:** `numpy.dtype`
+
+   Structured dtype for geodetic surface coordinates on the reference ellipsoid.
+
+   **Fields**:
+
+   - **lat** (float)
+     Geodetic latitude :math:`\phi` in radians.
+   - **lon** (float)
+     Geodetic longitude :math:`\lambda` in radians.
+
+.. data:: LLA_dtype
+
+   **Type:** `numpy.dtype`
+
+   Structured dtype for geodetic coordinates (latitude, longitude, altitude).
+
+   **Fields**:
+
+   - **lat** (float)
+     Geodetic latitude :math:`\phi` in radians.
+   - **lon** (float)
+     Geodetic longitude :math:`\lambda` in radians.
+   - **alt** (float)
+     Height :math:`h` above the ellipsoid in metres.
+
+.. data:: ENU_dtype
+
+   **Type:** `numpy.dtype`
+
+   Structured dtype for local East–North–Up unit‐vector frames.
+
+   **Fields**:
+
+   - **u_east** (float, shape (3,))
+     East unit‐vector components :math:`[x, y, z]`.
+   - **u_north** (float, shape (3,))
+     North unit‐vector components :math:`[x, y, z]`.
+   - **u_up** (float, shape (3,))
+     Up (radial) unit‐vector components :math:`[x, y, z]`.
+
+.. data:: AER_dtype
+
+   **Type:** `numpy.dtype`
+
+   Structured dtype for Azimuth–Elevation–Range observations.
+
+   **Fields**:
+
+   - **azimuth** (float)
+     Azimuth :math:`\alpha` in radians, measured clockwise from North.
+   - **elevation** (float)
+     Elevation :math:`\epsilon` in radians above the local horizon.
+   - **range** (float)
+     Slant range :math:`\rho` in metres.

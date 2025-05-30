@@ -1,0 +1,7 @@
+``tai_from_utc``
+================
+
+.. currentmodule:: spacekernel.time
+
+.. autofunction:: tai_from_utc
+        

@@ -1,0 +1,59 @@
+#############
+``BulletinC``
+#############
+
+.. currentmodule:: spacekernel.iers
+
+.. autoclass:: BulletinC
+
+
+*******
+Summary
+*******
+
+Attributes
+==========
+
+.. autosummary::
+
+    BulletinC.url
+
+Properties
+==========
+
+Dates
+-----
+
+.. autosummary::
+
+    BulletinC.mjd_utc
+    BulletinC.jd12_utc
+    BulletinC.jd12_ut1
+    BulletinC.mjd_ut1
+    BulletinC.date_utc
+
+DAT (= TAI - UTC)
+------------------
+
+.. autosummary::
+
+    BulletinC.dat
+
+Methods
+=======
+
+.. autosummary::
+
+    BulletinC.update
+
+*******
+Members
+*******
+
+.. autoproperty:: BulletinC.mjd_utc
+.. autoproperty:: BulletinC.date_utc
+.. autoproperty:: BulletinC.dat
+
+.. autoattribute:: BulletinC.url
+
+.. automethod:: BulletinC.update

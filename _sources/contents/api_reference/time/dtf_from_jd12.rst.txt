@@ -1,0 +1,7 @@
+``dtf_from_jd12``
+=================
+
+.. currentmodule:: spacekernel.time
+
+.. autofunction:: dtf_from_jd12
+        

@@ -1,0 +1,4 @@
+``surf_pos_of_ray_first_intersection``
+======================================
+
+.. automethod:: spacekernel.mathtools.ellipsoid.Ellipsoid.surf_pos_of_ray_first_intersection

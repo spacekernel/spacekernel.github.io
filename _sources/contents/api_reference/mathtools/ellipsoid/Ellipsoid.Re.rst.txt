@@ -1,0 +1,9 @@
+``Re``
+======
+
+.. currentmodule:: spacekernel.mathtools.ellipsoid
+
+.. autoattribute:: Ellipsoid.Re
+    :annotation: float
+
+    Ellipsoid equatorial radius (in meters).

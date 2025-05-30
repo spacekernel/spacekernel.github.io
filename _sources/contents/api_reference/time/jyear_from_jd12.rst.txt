@@ -1,0 +1,7 @@
+``jyear_from_jd12``
+===================
+
+.. currentmodule:: spacekernel.time
+
+.. autofunction:: jyear_from_jd12
+        

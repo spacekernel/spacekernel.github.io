@@ -1,0 +1,7 @@
+********************
+``update_if_needed``
+********************
+
+.. currentmodule:: spacekernel.iers
+
+.. autofunction:: update_if_needed

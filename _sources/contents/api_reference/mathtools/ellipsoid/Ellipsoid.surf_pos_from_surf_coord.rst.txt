@@ -1,0 +1,4 @@
+``surf_pos_from_surf_coord``
+============================
+
+.. automethod:: spacekernel.mathtools.ellipsoid.Ellipsoid.surf_pos_from_surf_coord

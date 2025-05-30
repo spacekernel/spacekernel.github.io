@@ -1,0 +1,7 @@
+``jd12_from_jd``
+================
+
+.. currentmodule:: spacekernel.time
+
+.. autofunction:: jd12_from_jd
+        

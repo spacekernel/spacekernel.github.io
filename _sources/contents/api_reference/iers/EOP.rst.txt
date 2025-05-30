@@ -1,0 +1,41 @@
+*******
+``EOP``
+*******
+
+.. currentmodule:: spacekernel.iers
+
+.. autoclass:: EOP
+
+
+=======
+Summary
+=======
+
+Properties
+----------
+
+.. autosummary::
+
+    EOP.pm_x
+    EOP.pm_y
+    EOP.dut
+    EOP.lod
+    EOP.dX
+    EOP.dY
+    EOP.dat
+    EOP.TAI_UT1
+    EOP.TT_UT1
+
+=======
+Members
+=======
+
+.. autoproperty:: EOP.pm_x
+.. autoproperty:: EOP.pm_y
+.. autoproperty:: EOP.dut
+.. autoproperty:: EOP.lod
+.. autoproperty:: EOP.dX
+.. autoproperty:: EOP.dY
+.. autoproperty:: EOP.dat
+.. autoproperty:: EOP.TAI_UT1
+.. autoproperty:: EOP.TT_UT1

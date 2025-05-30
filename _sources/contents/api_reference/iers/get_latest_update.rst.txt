@@ -1,0 +1,7 @@
+*********************
+``get_latest_update``
+*********************
+
+.. currentmodule:: spacekernel.iers
+
+.. autofunction:: get_latest_update

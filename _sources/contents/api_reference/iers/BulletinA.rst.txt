@@ -1,0 +1,109 @@
+#############
+``BulletinA``
+#############
+
+.. currentmodule:: spacekernel.iers
+
+.. autoclass:: BulletinA
+
+
+*******
+Summary
+*******
+
+Attributes
+==========
+
+.. autosummary::
+
+    BulletinA.url
+
+Properties
+==========
+
+Dates
+-----
+
+.. autosummary::
+
+    BulletinA.mjd_utc
+    BulletinA.jd12_utc
+    BulletinA.jd12_ut1
+    BulletinA.mjd_ut1
+    BulletinA.date_utc
+
+Polar motion
+------------
+
+.. autosummary::
+
+    BulletinA.pm_pred
+    BulletinA.pm_x
+    BulletinA.pm_x_error
+    BulletinA.pm_y
+    BulletinA.pm_y_error
+
+DUT ( = UT1 - UTC)
+------------------
+
+.. autosummary::
+
+    BulletinA.dut_pred
+    BulletinA.dut
+    BulletinA.dut_error
+
+Length of Day (LOD)
+-------------------
+
+.. autosummary::
+
+    BulletinA.lod
+    BulletinA.lod_error
+
+Nutation
+--------
+
+.. autosummary::
+
+    BulletinA.nutation_pred
+    BulletinA.dX_IAU2000A
+    BulletinA.dX_IAU2000A_error
+    BulletinA.dY_IAU2000A
+    BulletinA.dY_IAU2000A_error
+
+
+Methods
+=======
+
+.. autosummary::
+
+    BulletinA.update
+
+*******
+Members
+*******
+
+.. autoproperty:: BulletinA.mjd_utc
+.. autoproperty:: BulletinA.jd12_utc
+.. autoproperty:: BulletinA.jd12_ut1
+.. autoproperty:: BulletinA.mjd_ut1
+.. autoproperty:: BulletinA.date_utc
+.. autoproperty:: BulletinA.pm_pred
+.. autoproperty:: BulletinA.pm_x
+.. autoproperty:: BulletinA.pm_x_error
+.. autoproperty:: BulletinA.pm_y
+.. autoproperty:: BulletinA.pm_y_error
+.. autoproperty:: BulletinA.dut_pred
+.. autoproperty:: BulletinA.dut
+.. autoproperty:: BulletinA.dut_error
+.. autoproperty:: BulletinA.lod
+.. autoproperty:: BulletinA.lod_error
+.. autoproperty:: BulletinA.nutation_pred
+.. autoproperty:: BulletinA.dX_IAU2000A
+.. autoproperty:: BulletinA.dX_IAU2000A_error
+.. autoproperty:: BulletinA.dY_IAU2000A
+.. autoproperty:: BulletinA.dY_IAU2000A_error
+
+.. autoattribute:: BulletinA.url
+
+.. automethod:: BulletinA.update

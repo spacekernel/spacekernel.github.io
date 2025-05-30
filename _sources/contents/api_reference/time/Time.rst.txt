@@ -1,0 +1,220 @@
+########
+``Time``
+########
+
+.. currentmodule:: spacekernel.time
+
+.. autoclass:: Time
+
+
+***************
+Array Interface
+***************
+
+The :class:`Time` class implements a NumPy/Pandas-compatible array interface,
+supporting element-wise arithmetic, rich comparisons, indexing, slicing, and
+seamless conversion to NumPy and pandas objects.
+
+Rich Comparisons
+================
+
+:class:`Time` instances may be compared directly against pandas timestamps,
+NumPy datetime arrays, or scalar date/time strings.  All comparison operators
+return a boolean array of the same length.
+
+.. code-block:: python
+
+    >> from pandas import date_range
+    >> from spacekernel.time import Time
+
+    >> time = Time.range(start='2021-03-18', end='2022-10-18', step=3600)
+    >> time_pd = date_range(start='2021-03-18',
+                            end='2022-10-18', freq='3600s')
+    >> time_np = time_pd.to_numpy()
+
+    >> time == time_pd  # can be compared to DatetimeIndex or Timestamp
+    [ True  True  True ...  True  True  True]
+
+    >> time == time_np  # can be compared to numpy's datetime64
+    [ True  True  True ...  True  True  True]
+
+    >> time == Time(time_np) # can be compared to other Time instances
+    [ True  True  True ...  True  True  True]
+
+    >> time > '2022-05-10'  # can be compared to iso-format strings
+    [False False False ...  True  True  True]
+
+
+Indexing & Slicing
+==================
+
+Supports basic indexing, slicing, boolean masking, and advanced integer indexing,
+producing new :class:`Time` instances that mirror Pandas behavior.
+
+.. code-block:: python
+    :caption: single index
+
+    >> time[-5]
+
+    Time(2022-10-17T20:00:00.000000000, scale=UTC)
+
+.. code-block:: python
+    :caption: multiple index
+
+    >> time[[0, 10, 20]]
+
+    Time(['2021-03-18T00:00:00.000000000' '2021-03-18T10:00:00.000000000'
+     '2021-03-18T20:00:00.000000000'], scale=UTC)
+
+
+.. code-block:: python
+    :caption: Slicing by index
+
+    >> time[100:-100:3]
+
+    Time(['2021-03-22T04:00:00.000000000' '2021-03-22T07:00:00.000000000'
+     '2021-03-22T10:00:00.000000000' ... '2022-10-13T13:00:00.000000000'
+     '2022-10-13T16:00:00.000000000' '2022-10-13T19:00:00.000000000'], scale=UTC)
+
+
+.. code-block:: python
+    :caption: Slicing by value
+
+    >> time['2021-08':'2022-03']
+
+    Time(['2021-08-01T00:00:00.000000000' '2021-08-01T01:00:00.000000000'
+     '2021-08-01T02:00:00.000000000' ... '2022-02-28T21:00:00.000000000'
+     '2022-02-28T22:00:00.000000000' '2022-02-28T23:00:00.000000000'], scale=UTC)
+
+
+Elementwise Arithmetic
+======================
+
+The :class:`Time` class supports element‐wise addition and subtraction via its
+dunder methods, accepting scalar, string, or array offsets and returning either
+a new :class:`Time` or a numeric array:
+
+.. method:: Time.__add__(other) → Time
+
+   Add an offset to each timestamp in the sequence.
+
+   **Parameters**
+   other (:term:`numbers.Real` or :class:`numpy.ndarray` of float or str)
+   – A scalar number of seconds; a NumPy array of seconds; or a string with a
+   time unit suffix (e.g. “s”, “min”, “h”, “d”, “y”).
+
+   **Returns**
+   A new :class:`Time` instance shifted by the specified amount(s), preserving
+   the original shape and time scale.
+
+.. method:: Time.__radd__(other) → Time
+
+   Right‐hand addition (i.e. when the left operand is non‐Time). Delegates
+   to :meth:`__add__`.
+
+.. method:: Time.__sub__(other) → Union[:class:`Time`, :class:`numpy.ndarray`]
+
+   Subtract either another :class:`Time` or an offset:
+
+   - If **other** is a :class:`Time`, returns a NumPy array of float differences
+     in seconds (element‐wise).
+   - If **other** is a scalar, string, or NumPy float array, returns a new
+     :class:`Time` shifted by the negative of those offsets.
+
+.. method:: Time.__isub__(other) → Time
+
+   In‐place subtraction. Equivalent to ``self = self - other``.
+
+.. method:: Time.__rsub__(other) → Union[:class:`Time`, :class:`numpy.ndarray`]
+
+   Right‐hand subtraction. If **other** is a scalar or array, computes
+   ``other - self``; if **other** is a :class:`Time`, equivalent to
+   :meth:`__sub__`.
+
+**Supported string units**
+``s``, ``sec`` (seconds)
+``min`` (minutes)
+``h`` (hours)
+``d`` (days)
+``y`` (Julian years)
+
+All arithmetic preserves high‐precision nanosecond timing under the hood and
+propagates the :attr:`scale` unchanged.
+
+*******
+Summary
+*******
+
+Time scale
+----------
+
+.. autosummary::
+
+    Time.scale
+    Time.to_scale
+    Time.tai
+    Time.tt
+    Time.utc
+    Time.ut1
+
+
+Time format
+-----------
+
+.. autosummary::
+
+    Time.jd12
+    Time.jd
+    Time.mjd
+    Time.jyear
+    Time.byear
+    Time.dtf
+    Time.datetime64
+    Time.int64
+
+
+Utilities
+---------
+
+.. autosummary::
+
+    Time.range
+    Time.steps
+    Time.to_astropy
+    Time.to_pandas
+    Time.now
+    Time.ut1_utc
+    Time.ut1_tai
+    Time.tt_ut1
+    Time.tai_utc
+
+
+*******
+Members
+*******
+
+.. autoattribute:: Time.scale
+.. autoattribute:: Time.tai
+.. autoattribute:: Time.tt
+.. autoattribute:: Time.utc
+.. autoattribute:: Time.ut1
+.. automethod:: Time.to_scale
+
+.. autoattribute:: Time.jd12
+.. autoattribute:: Time.jd
+.. autoattribute:: Time.mjd
+.. autoattribute:: Time.jyear
+.. autoattribute:: Time.byear
+.. autoattribute:: Time.dtf
+.. autoattribute:: Time.datetime64
+.. autoattribute:: Time.int64
+
+.. automethod:: Time.range
+.. autoattribute:: Time.steps
+.. automethod:: Time.to_astropy
+.. automethod:: Time.to_pandas
+.. automethod:: Time.now
+.. autoattribute:: Time.ut1_utc
+.. autoattribute:: Time.ut1_tai
+.. autoattribute:: Time.tt_ut1
+.. autoattribute:: Time.tai_utc

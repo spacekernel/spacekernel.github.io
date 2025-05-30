@@ -1,0 +1,9 @@
+``f``
+=====
+
+.. currentmodule:: spacekernel.mathtools.ellipsoid
+
+.. autoattribute:: Ellipsoid.f
+    :annotation: float
+
+    The flattening factor of the ellipsoid. Between [0.0, 1.0).

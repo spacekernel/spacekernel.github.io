@@ -1,0 +1,7 @@
+``ut1_from_utc``
+================
+
+.. currentmodule:: spacekernel.time
+
+.. autofunction:: ut1_from_utc
+        

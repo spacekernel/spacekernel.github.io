@@ -1,0 +1,4 @@
+``solve_reduced_lat_equation``
+==============================
+
+.. automethod:: spacekernel.mathtools.ellipsoid.Ellipsoid.solve_reduced_lat_equation

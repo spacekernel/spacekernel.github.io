@@ -1,0 +1,11 @@
+######################################
+Math tools (``spacekernel.mathtools``)
+######################################
+
+
+This package is a collection of useful routines and high-level services involving mathematical calculations and data visualization that supports SpaceKernel ecosystem.
+
+.. toctree::
+    :maxdepth: 1
+
+    ellipsoid/index

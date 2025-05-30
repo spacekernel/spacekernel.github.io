@@ -1,0 +1,46 @@
+.. _api-iers:
+
+###########################
+IERS (``spacekernel.iers``)
+###########################
+
+
+.. currentmodule:: spacekernel.iers
+
+
+.. toctree::
+    :hidden:
+
+    EOP
+    BulletinA
+    BulletinC
+    update_bulletins
+    get_latest_update
+    update_if_needed
+
+The *International Earth Rotation and Reference Systems Service*
+(`IERS <https://www.iers.org/IERS/EN/Home/home_node.html>`_) is an
+international organisation responsible for providing several services and data
+regarding Earth reference frames.
+
+
+**********************************
+Earth Orientation Parameters (EOP)
+**********************************
+
+.. autosummary::
+
+    EOP
+
+
+*********
+Bulletins
+*********
+
+.. autosummary::
+
+    BulletinA
+    BulletinC
+    update_bulletins
+    get_latest_update
+    update_if_needed

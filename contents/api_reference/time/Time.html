@@ -1,0 +1,1255 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" data-theme="auto">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Time &#8212; SpaceKernel 0.1.0-dev0</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "auto";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "auto";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/style.css?v=35749eb2" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=4abeebbb"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=4ea706d9"></script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contents/api_reference/time/Time';</script>
+    <link rel="icon" href="../../../_static/spacekernel.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="int64_from_datetime64" href="int64_from_datetime64.html" />
+    <link rel="prev" title="Time (spacekernel.time)" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.1.0-dev0" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="auto">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/spacekernel.png" class="logo__image only-light" alt=""/>
+    <img src="../../../_static/spacekernel.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">SpaceKernel</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started/__main.html">
+    Getting Started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../tutorials/__main.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../user_guide/__main.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/SpaceKernel/spacekernel" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/spacekernel" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-box fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started/__main.html">
+    Getting Started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../tutorials/__main.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../user_guide/__main.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/SpaceKernel/spacekernel" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/spacekernel" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-box fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../datamodel/index.html">Data-Type Definitions (<code class="docutils literal notranslate"><span class="pre">spacekernel.datamodel</span></code>)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../mathtools/index.html">Math tools (<code class="docutils literal notranslate"><span class="pre">spacekernel.mathtools</span></code>)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../mathtools/ellipsoid/index.html">Ellipsoid Routines (<code class="docutils literal notranslate"><span class="pre">mathtools.ellipsoid</span></code>)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../mathtools/ellipsoid/Ellipsoid.html"><code class="docutils literal notranslate"><span class="pre">Ellipsoid</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../mathtools/ellipsoid/Ellipsoid.Re.html"><code class="docutils literal notranslate"><span class="pre">Re</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mathtools/ellipsoid/Ellipsoid.f.html"><code class="docutils literal notranslate"><span class="pre">f</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mathtools/ellipsoid/Ellipsoid.enu.html"><code class="docutils literal notranslate"><span class="pre">enu</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mathtools/ellipsoid/Ellipsoid.reduced_lat_from_geodetic_lat.html"><code class="docutils literal notranslate"><span class="pre">reduced_lat_from_geodetic_lat</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mathtools/ellipsoid/Ellipsoid.geodetic_lat_from_reduced_lat.html"><code class="docutils literal notranslate"><span class="pre">geodetic_lat_from_reduced_lat</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mathtools/ellipsoid/Ellipsoid.surf_pos_from_surf_coord.html"><code class="docutils literal notranslate"><span class="pre">surf_pos_from_surf_coord</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mathtools/ellipsoid/Ellipsoid.surf_coord_from_surf_pos.html"><code class="docutils literal notranslate"><span class="pre">surf_coord_from_surf_pos</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mathtools/ellipsoid/Ellipsoid.solve_reduced_lat_equation.html"><code class="docutils literal notranslate"><span class="pre">solve_reduced_lat_equation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mathtools/ellipsoid/Ellipsoid.lla_from_pos.html"><code class="docutils literal notranslate"><span class="pre">lla_from_pos</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mathtools/ellipsoid/Ellipsoid.pos_from_lla.html"><code class="docutils literal notranslate"><span class="pre">pos_from_lla</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mathtools/ellipsoid/Ellipsoid.surf_pos_of_ray_first_intersection.html"><code class="docutils literal notranslate"><span class="pre">surf_pos_of_ray_first_intersection</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mathtools/ellipsoid/Ellipsoid.aer_coords.html"><code class="docutils literal notranslate"><span class="pre">aer_coords</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mathtools/ellipsoid/Ellipsoid.c_reduced_lat_from_geodetic_lat.html"><code class="docutils literal notranslate"><span class="pre">c_reduced_lat_from_geodetic_lat</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mathtools/ellipsoid/Ellipsoid.c_geodetic_lat_from_reduced_lat.html"><code class="docutils literal notranslate"><span class="pre">c_geodetic_lat_from_reduced_lat</span></code></a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../iers/index.html">IERS (<code class="docutils literal notranslate"><span class="pre">spacekernel.iers</span></code>)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../iers/EOP.html"><code class="docutils literal notranslate"><span class="pre">EOP</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../iers/BulletinA.html"><code class="docutils literal notranslate"><span class="pre">BulletinA</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../iers/BulletinC.html"><code class="docutils literal notranslate"><span class="pre">BulletinC</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../iers/update_bulletins.html"><code class="docutils literal notranslate"><span class="pre">update_bulletins</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../iers/get_latest_update.html"><code class="docutils literal notranslate"><span class="pre">get_latest_update</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../iers/update_if_needed.html"><code class="docutils literal notranslate"><span class="pre">update_if_needed</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Time (<code class="docutils literal notranslate"><span class="pre">spacekernel.time</span></code>)</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">Time</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="int64_from_datetime64.html"><code class="docutils literal notranslate"><span class="pre">int64_from_datetime64</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="datetime64_from_int64.html"><code class="docutils literal notranslate"><span class="pre">datetime64_from_int64</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dtf_from_datetime64.html"><code class="docutils literal notranslate"><span class="pre">dtf_from_datetime64</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="int64_from_dtf.html"><code class="docutils literal notranslate"><span class="pre">int64_from_dtf</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="jd12_from_dtf.html"><code class="docutils literal notranslate"><span class="pre">jd12_from_dtf</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dtf_from_jd12.html"><code class="docutils literal notranslate"><span class="pre">dtf_from_jd12</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="jd_from_jd12.html"><code class="docutils literal notranslate"><span class="pre">jd_from_jd12</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="jd12_from_jd.html"><code class="docutils literal notranslate"><span class="pre">jd12_from_jd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="mjd_from_jd.html"><code class="docutils literal notranslate"><span class="pre">mjd_from_jd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="jd_from_mjd.html"><code class="docutils literal notranslate"><span class="pre">jd_from_mjd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="byear_from_jd12.html"><code class="docutils literal notranslate"><span class="pre">byear_from_jd12</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="jd12_from_byear.html"><code class="docutils literal notranslate"><span class="pre">jd12_from_byear</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="jyear_from_jd12.html"><code class="docutils literal notranslate"><span class="pre">jyear_from_jd12</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="jd12_from_jyear.html"><code class="docutils literal notranslate"><span class="pre">jd12_from_jyear</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tai_from_tt.html"><code class="docutils literal notranslate"><span class="pre">tai_from_tt</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tt_from_tai.html"><code class="docutils literal notranslate"><span class="pre">tt_from_tai</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="utc_from_tai.html"><code class="docutils literal notranslate"><span class="pre">utc_from_tai</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tai_from_utc.html"><code class="docutils literal notranslate"><span class="pre">tai_from_utc</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ut1_from_utc.html"><code class="docutils literal notranslate"><span class="pre">ut1_from_utc</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="utc_from_ut1.html"><code class="docutils literal notranslate"><span class="pre">utc_from_ut1</span></code></a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../../../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+  </ul>
+</nav></div>
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">API Reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Time (<code class="docutils literal notranslate"><span class="pre">spacekernel.time</span></code>)</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><code class="docutils literal notranslate"><span class="pre">Time</span></code></span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="time">
+<h1><code class="docutils literal notranslate"><span class="pre">Time</span></code><a class="headerlink" href="#time" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="spacekernel.time.Time">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">spacekernel.time.</span></span><span class="sig-name descname"><span class="pre">Time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data:</span> <span class="pre">DatetimeLike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">scale:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'UTC'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">format:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#spacekernel.time.Time" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Mission-designed Time objects for Earth satellites.</p>
+<p>The main purpose of <a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> is to provide a friendly and rapid
+interface for creating, handling and converting large arrays of time
+samples between time scales and formats (refer to <a class="reference internal" href="#r74a2512ffb04-1" id="id1">[1]</a>).</p>
+<p><a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> is able to deal with time samples observed with respect to the most
+relevant time scales for Earth satellite missions:
+<a class="reference external" href="https://en.wikipedia.org/wiki/International_Atomic_Time">TAI</a>,
+<a class="reference external" href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">UTC</a>,
+<a class="reference external" href="https://en.wikipedia.org/wiki/Universal_Time">UT1</a>,
+and
+<a class="reference external" href="https://en.wikipedia.org/wiki/Terrestrial_Time">TT</a> . The time
+scale of an instance is accessed through the read-only attribute <a class="reference internal" href="#spacekernel.time.Time.scale" title="spacekernel.time.Time.scale"><code class="xref py py-attr docutils literal notranslate"><span class="pre">scale</span></code></a>.</p>
+<p>In order to provide compatibility with the most traditional time types,
+<a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> accepts several constructing possibilities.</p>
+<p>REVIEW</p>
+<p>For such reason,
+<a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> is built as an <a class="reference external" href="https://docs.python.org/3/extending/newtypes_tutorial.html">extension type</a>
+that implements the <a class="reference external" href="https://docs.python.org/3/c-api/buffer.html">buffer protocol</a>,
+hence behaving like a <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy's</span> <span class="pre">array</span></code></a> in several
+situations.</p>
+<p>Nevertheless, it may become a bit confusing learn all possible
+instantiating signatures just by refering to the parameters description.
+Hence, to easy such learning process, the tutorial <span class="xref std std-ref">tutorial-time</span>
+provides a collection of comprehensive examples on how to create
+<a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> objects.</p>
+<p><a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> is mostly focused on providing high performance time services for space
+mission simulations and analysis rather than being an all-purpose time
+class.</p>
+<p>Time can be represented in python in many types:
+<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>,
+<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a>,
+<a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.datetime64" title="(in NumPy v2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime64</span></code></a>,
+<a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DatetimeIndex.html#pandas.DatetimeIndex" title="(in pandas v2.2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">DatetimeIndex</span></code></a>,
+<a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.time.Time.html#astropy.time.Time" title="(in Astropy v7.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Astropy's</span> <span class="pre">Time</span></code></a>, etc. In order to provide
+compatibility with the most common types and, consequently, a friendly
+interface to them, <a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> accepts several constructing possibilities.
+Nevertheless, it may become a bit confusing learn all possible
+instantiating signatures just by refering to the parameters description.
+Hence, to easy such learning process, the tutorial <span class="xref std std-ref">tutorial-time</span>
+provides a collection of comprehensive examples on how to create
+<a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> objects.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>data</strong><span class="classifier">datetime-like object. Following options are available:</span></dt><dd><dl>
+<dt>jd12<span class="classifier">(N,2)-shaped <a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.double" title="(in NumPy v2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code></a>-dtyped <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></dt><dd><p>Two-part julian date (used by SOFA).  Parameter <code class="docutils literal notranslate"><span class="pre">format</span></code> is ignored.</p>
+</dd>
+<dt>jd<span class="classifier">(N,)-shaped <a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.double" title="(in NumPy v2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code></a>-dtyped <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></dt><dd><p>Julian date. Parameter <code class="docutils literal notranslate"><span class="pre">format</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">'jd'</span></code>.</p>
+</dd>
+<dt>mjd<span class="classifier">(N,)-shaped <a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.double" title="(in NumPy v2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code></a>-dtyped <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></dt><dd><p>Modified julian date. Parameter <code class="docutils literal notranslate"><span class="pre">format</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">'mjd'</span></code>.</p>
+</dd>
+<dt>jyear<span class="classifier">(N,)-shaped <a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.double" title="(in NumPy v2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code></a>-dtyped <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></dt><dd><p>Years with respect to the Julian epoch. Parameter <code class="docutils literal notranslate"><span class="pre">format</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">'jyear'</span></code>.</p>
+</dd>
+<dt>byear<span class="classifier">(N,)-shaped <a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.double" title="(in NumPy v2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code></a>-dtyped <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></dt><dd><p>Years with respect to the besselian epoch. Parameter <code class="docutils literal notranslate"><span class="pre">format</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">'byear'</span></code>.</p>
+</dd>
+<dt>dtf<span class="classifier">(N,)-shaped <a class="reference external" href="https://numpy.org/doc/stable/user/basics.rec.html#structured-arrays">Structured array</a></span></dt><dd><p>Datetime fields. This array must have the following <a class="reference external" href="https://numpy.org/doc/stable/user/basics.rec.html#structured-datatypes">structured datatype</a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dtype</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">uint16</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">uint8</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;day&#39;</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">uint8</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;hour&#39;</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">uint8</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;minute&#39;</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">uint8</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;second&#39;</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">double</span><span class="p">)</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>Parameter <code class="docutils literal notranslate"><span class="pre">format</span></code> is ignored.</p>
+</dd>
+<dt>datetime64<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.datetime64" title="(in NumPy v2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime64</span></code></a> | (N,)-shaped <a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.datetime64" title="(in NumPy v2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime64</span></code></a>-dtyped <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></dt><dd><p>Numpy datetime object. Parameter <code class="docutils literal notranslate"><span class="pre">format</span></code> is ignored.</p>
+</dd>
+<dt>int64<span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.int_" title="(in NumPy v2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int64</span></code></a> | (N,)-shaped <a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.int_" title="(in NumPy v2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int64</span></code></a>-dtyped <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></dt><dd><p>Nanoseconds since 1970-01-01 00:00:00. Parameter <code class="docutils literal notranslate"><span class="pre">format</span></code> is ignored.</p>
+</dd>
+<dt>pandas<span class="classifier"><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.Timestamp.html#pandas.Timestamp" title="(in pandas v2.2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Timestamp</span></code></a> | <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DatetimeIndex.html#pandas.DatetimeIndex" title="(in pandas v2.2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">DatetimeIndex</span></code></a></span></dt><dd><p>Pandas datetime objects. Parameter <code class="docutils literal notranslate"><span class="pre">format</span></code> is ignored. If it is
+timezone-aware, then it will first be converted to UTC and
+<code class="docutils literal notranslate"><span class="pre">scale</span></code> parameter is ignored.</p>
+</dd>
+<dt>pydatetime<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#iterator-types">Iterator</a> [<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a>]</span></dt><dd><p>Python datetime object. Parameter <code class="docutils literal notranslate"><span class="pre">format</span></code> is ignored. If it is
+timezone-aware, then it will first be converted to UTC and
+<code class="docutils literal notranslate"><span class="pre">scale</span></code> parameter is ignored.</p>
+</dd>
+<dt>datetimeiso<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#iterator-types">Iterator</a> [<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> strings.
+Parameter <code class="docutils literal notranslate"><span class="pre">format</span></code> is ignored. If it is timezone-aware, then it
+will first be converted to UTC and <code class="docutils literal notranslate"><span class="pre">scale</span></code> parameter is ignored.</p>
+</dd>
+<dt>astropy<span class="classifier"><a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.time.Time.html#astropy.time.Time" title="(in Astropy v7.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">astropy.time.Time</span></code></a></span></dt><dd><p>Astropy datetime object. Parameters <code class="docutils literal notranslate"><span class="pre">format</span></code> and <code class="docutils literal notranslate"><span class="pre">scale</span></code> are
+ignored.</p>
+</dd>
+<dt>spacekernel<span class="classifier"><a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a></span></dt><dd><p>SpaceKernel datetime object. This is usually done to get a copy of the
+original object. Parameters <code class="docutils literal notranslate"><span class="pre">format</span></code> and <code class="docutils literal notranslate"><span class="pre">scale</span></code> are ignored.</p>
+</dd>
+</dl>
+</dd>
+<dt><strong>scale</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The time scale of the time samples. Possible values are: <code class="docutils literal notranslate"><span class="pre">'TAI'</span></code>,
+<code class="docutils literal notranslate"><span class="pre">'TT'</span></code>, <code class="docutils literal notranslate"><span class="pre">'UTC'</span></code>, <code class="docutils literal notranslate"><span class="pre">'UT1'</span></code>.</p>
+</dd>
+<dt><strong>format</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref py py-data docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>Format of the data. If the format could not be unambiguously inferred
+from <code class="docutils literal notranslate"><span class="pre">data</span></code>, then this parameter must be set.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<div role="list" class="citation-list">
+<div class="citation" id="r74a2512ffb04-1" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.iausofa.org/2021_0512_C/sofa/sofa_ts_c.pdf">SOFA Time Scale and Calendar Tools (.pdf)</a></p>
+</div>
+</div>
+</dd></dl>
+
+<section id="array-interface">
+<h2>Array Interface<a class="headerlink" href="#array-interface" title="Link to this heading">#</a></h2>
+<p>The <a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> class implements a NumPy/Pandas-compatible array interface,
+supporting element-wise arithmetic, rich comparisons, indexing, slicing, and
+seamless conversion to NumPy and pandas objects.</p>
+<section id="rich-comparisons">
+<h3>Rich Comparisons<a class="headerlink" href="#rich-comparisons" title="Link to this heading">#</a></h3>
+<p><a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> instances may be compared directly against pandas timestamps,
+NumPy datetime arrays, or scalar date/time strings.  All comparison operators
+return a boolean array of the same length.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="kn">import</span> <span class="n">date_range</span>
+<span class="o">&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">spacekernel.time</span><span class="w"> </span><span class="kn">import</span> <span class="n">Time</span>
+
+<span class="o">&gt;&gt;</span> <span class="n">time</span> <span class="o">=</span> <span class="n">Time</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;2021-03-18&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;2022-10-18&#39;</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">3600</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span> <span class="n">time_pd</span> <span class="o">=</span> <span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;2021-03-18&#39;</span><span class="p">,</span>
+                        <span class="n">end</span><span class="o">=</span><span class="s1">&#39;2022-10-18&#39;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;3600s&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span> <span class="n">time_np</span> <span class="o">=</span> <span class="n">time_pd</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+
+<span class="o">&gt;&gt;</span> <span class="n">time</span> <span class="o">==</span> <span class="n">time_pd</span>  <span class="c1"># can be compared to DatetimeIndex or Timestamp</span>
+<span class="p">[</span> <span class="kc">True</span>  <span class="kc">True</span>  <span class="kc">True</span> <span class="o">...</span>  <span class="kc">True</span>  <span class="kc">True</span>  <span class="kc">True</span><span class="p">]</span>
+
+<span class="o">&gt;&gt;</span> <span class="n">time</span> <span class="o">==</span> <span class="n">time_np</span>  <span class="c1"># can be compared to numpy&#39;s datetime64</span>
+<span class="p">[</span> <span class="kc">True</span>  <span class="kc">True</span>  <span class="kc">True</span> <span class="o">...</span>  <span class="kc">True</span>  <span class="kc">True</span>  <span class="kc">True</span><span class="p">]</span>
+
+<span class="o">&gt;&gt;</span> <span class="n">time</span> <span class="o">==</span> <span class="n">Time</span><span class="p">(</span><span class="n">time_np</span><span class="p">)</span> <span class="c1"># can be compared to other Time instances</span>
+<span class="p">[</span> <span class="kc">True</span>  <span class="kc">True</span>  <span class="kc">True</span> <span class="o">...</span>  <span class="kc">True</span>  <span class="kc">True</span>  <span class="kc">True</span><span class="p">]</span>
+
+<span class="o">&gt;&gt;</span> <span class="n">time</span> <span class="o">&gt;</span> <span class="s1">&#39;2022-05-10&#39;</span>  <span class="c1"># can be compared to iso-format strings</span>
+<span class="p">[</span><span class="kc">False</span> <span class="kc">False</span> <span class="kc">False</span> <span class="o">...</span>  <span class="kc">True</span>  <span class="kc">True</span>  <span class="kc">True</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="indexing-slicing">
+<h3>Indexing &amp; Slicing<a class="headerlink" href="#indexing-slicing" title="Link to this heading">#</a></h3>
+<p>Supports basic indexing, slicing, boolean masking, and advanced integer indexing,
+producing new <a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> instances that mirror Pandas behavior.</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">single index</span><a class="headerlink" href="#id4" title="Link to this code">#</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">time</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">]</span>
+
+<span class="n">Time</span><span class="p">(</span><span class="mi">2022</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">17</span><span class="n">T20</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mf">00.000000000</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">UTC</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">multiple index</span><a class="headerlink" href="#id5" title="Link to this code">#</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">time</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">]]</span>
+
+<span class="n">Time</span><span class="p">([</span><span class="s1">&#39;2021-03-18T00:00:00.000000000&#39;</span> <span class="s1">&#39;2021-03-18T10:00:00.000000000&#39;</span>
+ <span class="s1">&#39;2021-03-18T20:00:00.000000000&#39;</span><span class="p">],</span> <span class="n">scale</span><span class="o">=</span><span class="n">UTC</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">Slicing by index</span><a class="headerlink" href="#id6" title="Link to this code">#</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">time</span><span class="p">[</span><span class="mi">100</span><span class="p">:</span><span class="o">-</span><span class="mi">100</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="n">Time</span><span class="p">([</span><span class="s1">&#39;2021-03-22T04:00:00.000000000&#39;</span> <span class="s1">&#39;2021-03-22T07:00:00.000000000&#39;</span>
+ <span class="s1">&#39;2021-03-22T10:00:00.000000000&#39;</span> <span class="o">...</span> <span class="s1">&#39;2022-10-13T13:00:00.000000000&#39;</span>
+ <span class="s1">&#39;2022-10-13T16:00:00.000000000&#39;</span> <span class="s1">&#39;2022-10-13T19:00:00.000000000&#39;</span><span class="p">],</span> <span class="n">scale</span><span class="o">=</span><span class="n">UTC</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">Slicing by value</span><a class="headerlink" href="#id7" title="Link to this code">#</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">time</span><span class="p">[</span><span class="s1">&#39;2021-08&#39;</span><span class="p">:</span><span class="s1">&#39;2022-03&#39;</span><span class="p">]</span>
+
+<span class="n">Time</span><span class="p">([</span><span class="s1">&#39;2021-08-01T00:00:00.000000000&#39;</span> <span class="s1">&#39;2021-08-01T01:00:00.000000000&#39;</span>
+ <span class="s1">&#39;2021-08-01T02:00:00.000000000&#39;</span> <span class="o">...</span> <span class="s1">&#39;2022-02-28T21:00:00.000000000&#39;</span>
+ <span class="s1">&#39;2022-02-28T22:00:00.000000000&#39;</span> <span class="s1">&#39;2022-02-28T23:00:00.000000000&#39;</span><span class="p">],</span> <span class="n">scale</span><span class="o">=</span><span class="n">UTC</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="elementwise-arithmetic">
+<h3>Elementwise Arithmetic<a class="headerlink" href="#elementwise-arithmetic" title="Link to this heading">#</a></h3>
+<p>The <a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> class supports element‐wise addition and subtraction via its
+dunder methods, accepting scalar, string, or array offsets and returning either
+a new <a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> or a numeric array:</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Time.__add__(other)</span> <span class="pre">→</span> <span class="pre">Time</span></span></dt>
+<dd><p>Add an offset to each timestamp in the sequence.</p>
+<p><strong>Parameters</strong>
+other (<span class="xref std std-term">numbers.Real</span> or <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> of float or str)
+– A scalar number of seconds; a NumPy array of seconds; or a string with a
+time unit suffix (e.g. “s”, “min”, “h”, “d”, “y”).</p>
+<p><strong>Returns</strong>
+A new <a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> instance shifted by the specified amount(s), preserving
+the original shape and time scale.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Time.__radd__(other)</span> <span class="pre">→</span> <span class="pre">Time</span></span></dt>
+<dd><p>Right‐hand addition (i.e. when the left operand is non‐Time). Delegates
+to <code class="xref py py-meth docutils literal notranslate"><span class="pre">__add__()</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Time.__sub__(other)</span> <span class="pre">→</span> <span class="pre">Union[:class:`Time`,</span> <span class="pre">:class:`numpy.ndarray`]</span></span></dt>
+<dd><p>Subtract either another <a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> or an offset:</p>
+<ul class="simple">
+<li><p>If <strong>other</strong> is a <a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a>, returns a NumPy array of float differences
+in seconds (element‐wise).</p></li>
+<li><p>If <strong>other</strong> is a scalar, string, or NumPy float array, returns a new
+<a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> shifted by the negative of those offsets.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Time.__isub__(other)</span> <span class="pre">→</span> <span class="pre">Time</span></span></dt>
+<dd><p>In‐place subtraction. Equivalent to <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">=</span> <span class="pre">self</span> <span class="pre">-</span> <span class="pre">other</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Time.__rsub__(other)</span> <span class="pre">→</span> <span class="pre">Union[:class:`Time`,</span> <span class="pre">:class:`numpy.ndarray`]</span></span></dt>
+<dd><p>Right‐hand subtraction. If <strong>other</strong> is a scalar or array, computes
+<code class="docutils literal notranslate"><span class="pre">other</span> <span class="pre">-</span> <span class="pre">self</span></code>; if <strong>other</strong> is a <a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a>, equivalent to
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">__sub__()</span></code>.</p>
+</dd></dl>
+
+<p><strong>Supported string units</strong>
+<code class="docutils literal notranslate"><span class="pre">s</span></code>, <code class="docutils literal notranslate"><span class="pre">sec</span></code> (seconds)
+<code class="docutils literal notranslate"><span class="pre">min</span></code> (minutes)
+<code class="docutils literal notranslate"><span class="pre">h</span></code> (hours)
+<code class="docutils literal notranslate"><span class="pre">d</span></code> (days)
+<code class="docutils literal notranslate"><span class="pre">y</span></code> (Julian years)</p>
+<p>All arithmetic preserves high‐precision nanosecond timing under the hood and
+propagates the <code class="xref py py-attr docutils literal notranslate"><span class="pre">scale</span></code> unchanged.</p>
+</section>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacekernel.time.Time.scale" title="spacekernel.time.Time.scale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.scale</span></code></a></p></td>
+<td><p>Time.scale: str Timescale of the samples</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacekernel.time.Time.to_scale" title="spacekernel.time.Time.to_scale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.to_scale</span></code></a>(self, str scale)</p></td>
+<td><p>Convert this Time instance to a different time scale.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacekernel.time.Time.tai" title="spacekernel.time.Time.tai"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.tai</span></code></a></p></td>
+<td><p>Time.tai: Time The corresponding <a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> instance converted to TAI scale</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacekernel.time.Time.tt" title="spacekernel.time.Time.tt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.tt</span></code></a></p></td>
+<td><p>Time.tt: Time The corresponding <a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> instance converted to TT scale</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacekernel.time.Time.utc" title="spacekernel.time.Time.utc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.utc</span></code></a></p></td>
+<td><p>Time.utc: Time The corresponding <a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> instance converted to UTC scale</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacekernel.time.Time.ut1" title="spacekernel.time.Time.ut1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.ut1</span></code></a></p></td>
+<td><p>Time.ut1: Time The corresponding <a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> instance converted to UT1 scale</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacekernel.time.Time.jd12" title="spacekernel.time.Time.jd12"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.jd12</span></code></a></p></td>
+<td><p>Time.jd12: ndarray[double] Two-part julian date used by SOFA</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacekernel.time.Time.jd" title="spacekernel.time.Time.jd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.jd</span></code></a></p></td>
+<td><p>Time.jd: ndarray[double] Julian date</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacekernel.time.Time.mjd" title="spacekernel.time.Time.mjd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.mjd</span></code></a></p></td>
+<td><p>Time.mjd: ndarray[double] Modified Julian date</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacekernel.time.Time.jyear" title="spacekernel.time.Time.jyear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.jyear</span></code></a></p></td>
+<td><p>Time.jyear: ndarray[double] Years with respect to the Julian epoch</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacekernel.time.Time.byear" title="spacekernel.time.Time.byear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.byear</span></code></a></p></td>
+<td><p>Time.byear: ndarray[double] Years with respect to the Besselian epoch</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacekernel.time.Time.dtf" title="spacekernel.time.Time.dtf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.dtf</span></code></a></p></td>
+<td><p>Time.dtf: ndarray[DTF] Datetime fields</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacekernel.time.Time.datetime64" title="spacekernel.time.Time.datetime64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.datetime64</span></code></a></p></td>
+<td><p>Time.datetime64: ndarray[npy_datetime] Numpy's datetime64</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacekernel.time.Time.int64" title="spacekernel.time.Time.int64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.int64</span></code></a></p></td>
+<td><p>Time.int64: ndarray[int64_t] Nanoseconds since 1970-01-01 00:00:00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacekernel.time.Time.range" title="spacekernel.time.Time.range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.range</span></code></a>(cls[, scale])</p></td>
+<td><p>Construct a <cite>Time</cite> object spanning a regular grid of instants.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacekernel.time.Time.steps" title="spacekernel.time.Time.steps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.steps</span></code></a></p></td>
+<td><p>Time.steps: ndarray[double] Compute time intervals between consecutive entries, in seconds.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacekernel.time.Time.to_astropy" title="spacekernel.time.Time.to_astropy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.to_astropy</span></code></a>(self)</p></td>
+<td><p>Convert this Time to an Astropy Time object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacekernel.time.Time.to_pandas" title="spacekernel.time.Time.to_pandas"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.to_pandas</span></code></a>(self)</p></td>
+<td><p>Convert this Time to a pandas DatetimeIndex or Timestamp.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacekernel.time.Time.now" title="spacekernel.time.Time.now"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.now</span></code></a>(cls)</p></td>
+<td><p>Construct a Time for the current UTC instant.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacekernel.time.Time.ut1_utc" title="spacekernel.time.Time.ut1_utc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.ut1_utc</span></code></a></p></td>
+<td><p>Time.ut1_utc: ndarray[double] The difference UT1-UTC, a.k.a <span class="math notranslate nohighlight">\(\Delta UT\)</span> or <span class="math notranslate nohighlight">\(\Delta UT1\)</span> (in seconds)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacekernel.time.Time.ut1_tai" title="spacekernel.time.Time.ut1_tai"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.ut1_tai</span></code></a></p></td>
+<td><p>Time.ut1_tai: ndarray[double] The difference UT1-TAI (in seconds)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacekernel.time.Time.tt_ut1" title="spacekernel.time.Time.tt_ut1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.tt_ut1</span></code></a></p></td>
+<td><p>Time.tt_ut1: ndarray[double] The difference TT-UT1, a.k.a <span class="math notranslate nohighlight">\(\Delta T\)</span> (in seconds)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacekernel.time.Time.tai_utc" title="spacekernel.time.Time.tai_utc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.tai_utc</span></code></a></p></td>
+<td><p>Time.tai_utc: ndarray[double] The difference TAI-UTC, a.k.a <span class="math notranslate nohighlight">\(\Delta AT\)</span> (in seconds)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="members">
+<h2>Members<a class="headerlink" href="#members" title="Link to this heading">#</a></h2>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="spacekernel.time.Time.scale">
+<span class="sig-prename descclassname"><span class="pre">Time.</span></span><span class="sig-name descname"><span class="pre">scale</span></span><a class="headerlink" href="#spacekernel.time.Time.scale" title="Link to this definition">#</a></dt>
+<dd><p>Time.scale: str
+Timescale of the samples</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="spacekernel.time.Time.tai">
+<span class="sig-prename descclassname"><span class="pre">Time.</span></span><span class="sig-name descname"><span class="pre">tai</span></span><a class="headerlink" href="#spacekernel.time.Time.tai" title="Link to this definition">#</a></dt>
+<dd><p>Time.tai: Time
+The corresponding <a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> instance converted to TAI scale</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="spacekernel.time.Time.tt">
+<span class="sig-prename descclassname"><span class="pre">Time.</span></span><span class="sig-name descname"><span class="pre">tt</span></span><a class="headerlink" href="#spacekernel.time.Time.tt" title="Link to this definition">#</a></dt>
+<dd><p>Time.tt: Time
+The corresponding <a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> instance converted to TT scale</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="spacekernel.time.Time.utc">
+<span class="sig-prename descclassname"><span class="pre">Time.</span></span><span class="sig-name descname"><span class="pre">utc</span></span><a class="headerlink" href="#spacekernel.time.Time.utc" title="Link to this definition">#</a></dt>
+<dd><p>Time.utc: Time
+The corresponding <a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> instance converted to UTC scale</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="spacekernel.time.Time.ut1">
+<span class="sig-prename descclassname"><span class="pre">Time.</span></span><span class="sig-name descname"><span class="pre">ut1</span></span><a class="headerlink" href="#spacekernel.time.Time.ut1" title="Link to this definition">#</a></dt>
+<dd><p>Time.ut1: Time
+The corresponding <a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> instance converted to UT1 scale</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacekernel.time.Time.to_scale">
+<span class="sig-prename descclassname"><span class="pre">Time.</span></span><span class="sig-name descname"><span class="pre">to_scale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">scale</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><span class="pre">Time</span></a></span></span><a class="headerlink" href="#spacekernel.time.Time.to_scale" title="Link to this definition">#</a></dt>
+<dd><p>Convert this Time instance to a different time scale.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>scale</strong><span class="classifier">{‘TAI’, ‘TAI’, ‘UT1’, ‘UTC’}</span></dt><dd><p>The target time scale:</p>
+<ul class="simple">
+<li><p>‘TAI’ : International Atomic Time</p></li>
+<li><p>‘TT’  : Terrestrial Time</p></li>
+<li><p>‘UT1’ : Universal Time 1</p></li>
+<li><p>‘UTC’ : Coordinated Universal Time</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>Time</dt><dd><p>A new <cite>Time</cite> object representing the same physical instant
+expressed in the requested scale.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt>ValueError</dt><dd><p>If <cite>scale</cite> is not one of ‘TAI’, ‘TT’, ‘UT1’, or ‘UTC’.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">t_tt</span> <span class="o">=</span> <span class="n">time_obj</span><span class="o">.</span><span class="n">to_scale</span><span class="p">(</span><span class="s1">&#39;TT&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t_utc</span> <span class="o">=</span> <span class="n">t_tt</span><span class="o">.</span><span class="n">to_scale</span><span class="p">(</span><span class="s1">&#39;UTC&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="spacekernel.time.Time.jd12">
+<span class="sig-prename descclassname"><span class="pre">Time.</span></span><span class="sig-name descname"><span class="pre">jd12</span></span><a class="headerlink" href="#spacekernel.time.Time.jd12" title="Link to this definition">#</a></dt>
+<dd><p>Time.jd12: ndarray[double]
+Two-part julian date used by SOFA</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="spacekernel.time.Time.jd">
+<span class="sig-prename descclassname"><span class="pre">Time.</span></span><span class="sig-name descname"><span class="pre">jd</span></span><a class="headerlink" href="#spacekernel.time.Time.jd" title="Link to this definition">#</a></dt>
+<dd><p>Time.jd: ndarray[double]
+Julian date</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="spacekernel.time.Time.mjd">
+<span class="sig-prename descclassname"><span class="pre">Time.</span></span><span class="sig-name descname"><span class="pre">mjd</span></span><a class="headerlink" href="#spacekernel.time.Time.mjd" title="Link to this definition">#</a></dt>
+<dd><p>Time.mjd: ndarray[double]
+Modified Julian date</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="spacekernel.time.Time.jyear">
+<span class="sig-prename descclassname"><span class="pre">Time.</span></span><span class="sig-name descname"><span class="pre">jyear</span></span><a class="headerlink" href="#spacekernel.time.Time.jyear" title="Link to this definition">#</a></dt>
+<dd><p>Time.jyear: ndarray[double]
+Years with respect to the Julian epoch</p>
+<p>Julian epoch = 2000-01-01 12:00:00 TT
+Julian year = 365.25 days</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="spacekernel.time.Time.byear">
+<span class="sig-prename descclassname"><span class="pre">Time.</span></span><span class="sig-name descname"><span class="pre">byear</span></span><a class="headerlink" href="#spacekernel.time.Time.byear" title="Link to this definition">#</a></dt>
+<dd><p>Time.byear: ndarray[double]
+Years with respect to the Besselian epoch</p>
+<p>Besselian epoch = ???
+Besselian year = 365.2422 days</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="spacekernel.time.Time.dtf">
+<span class="sig-prename descclassname"><span class="pre">Time.</span></span><span class="sig-name descname"><span class="pre">dtf</span></span><a class="headerlink" href="#spacekernel.time.Time.dtf" title="Link to this definition">#</a></dt>
+<dd><p>Time.dtf: ndarray[DTF]
+Datetime fields</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="spacekernel.time.Time.datetime64">
+<span class="sig-prename descclassname"><span class="pre">Time.</span></span><span class="sig-name descname"><span class="pre">datetime64</span></span><a class="headerlink" href="#spacekernel.time.Time.datetime64" title="Link to this definition">#</a></dt>
+<dd><p>Time.datetime64: ndarray[npy_datetime]
+Numpy’s datetime64</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="spacekernel.time.Time.int64">
+<span class="sig-prename descclassname"><span class="pre">Time.</span></span><span class="sig-name descname"><span class="pre">int64</span></span><a class="headerlink" href="#spacekernel.time.Time.int64" title="Link to this definition">#</a></dt>
+<dd><p>Time.int64: ndarray[int64_t]
+Nanoseconds since 1970-01-01 00:00:00</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacekernel.time.Time.range">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Time.</span></span><span class="sig-name descname"><span class="pre">range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'UTC'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><span class="pre">Time</span></a></span></span><a class="headerlink" href="#spacekernel.time.Time.range" title="Link to this definition">#</a></dt>
+<dd><p>Construct a <cite>Time</cite> object spanning a regular grid of instants.</p>
+<p>This is a thin wrapper around <cite>pandas.date_range</cite>, with added support
+for <cite>Time</cite> inputs and numeric step definitions (in seconds).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>scale</strong><span class="classifier">{‘UTC’, ‘TAI’, ‘TT’, ‘UT1’}, optional</span></dt><dd><p>Time scale for the resulting <cite>Time</cite> object (default: ‘UTC’).</p>
+</dd>
+<dt><strong>start</strong><span class="classifier">str, pandas.Timestamp, or Time, optional</span></dt><dd><p>Left endpoint of the range.  If a <cite>Time</cite> is passed, its value
+is converted to a plain pandas timestamp.</p>
+</dd>
+<dt><strong>end</strong><span class="classifier">str, pandas.Timestamp, or Time, optional</span></dt><dd><p>Right endpoint of the range.  Converted to pandas timestamp if needed.</p>
+</dd>
+<dt><strong>step</strong><span class="classifier">str or float, optional</span></dt><dd><p>If a string, passed directly as <cite>freq</cite> to <cite>pandas.date_range</cite> (e.g. ‘1H’, ‘30T’).
+If a real number, interpreted as a fixed step size in seconds.</p>
+</dd>
+<dt><strong>n_points</strong><span class="classifier">int, optional</span></dt><dd><p>Number of periods; shorthand for <cite>periods</cite> in pandas.</p>
+</dd>
+<dt><strong>**kwargs</strong></dt><dd><p>Any other keyword arguments accepted by <cite>pandas.date_range</cite>
+(e.g. <cite>freq</cite>, <cite>periods</cite>, <cite>tz</cite>, <cite>inclusive</cite>, etc.).</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>Time</dt><dd><p>A new <cite>Time</cite> instance containing the equally‐spaced instants
+produced by <cite>pandas.date_range</cite>, expressed in the requested <cite>scale</cite>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt>ValueError</dt><dd><p>If neither <cite>start</cite> nor <cite>end</cite> nor <cite>periods</cite>/<cite>n_points</cite> is provided,
+or if step conversion fails.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># hourly UTC from 2025-01-01 00:00 to 2025-01-02 00:00</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Time</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;2025-01-01&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;2025-01-02&#39;</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="s1">&#39;1H&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># ten points between two Time objects, in TT</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t0</span> <span class="o">=</span> <span class="n">Time</span><span class="p">(</span><span class="s1">&#39;2025-01-01T00:00&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="s1">&#39;UTC&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t1</span> <span class="o">=</span> <span class="n">Time</span><span class="p">(</span><span class="s1">&#39;2025-01-02T00:00&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="s1">&#39;UTC&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Time</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="s1">&#39;TT&#39;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="n">t0</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">t1</span><span class="p">,</span> <span class="n">n_points</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="spacekernel.time.Time.steps">
+<span class="sig-prename descclassname"><span class="pre">Time.</span></span><span class="sig-name descname"><span class="pre">steps</span></span><a class="headerlink" href="#spacekernel.time.Time.steps" title="Link to this definition">#</a></dt>
+<dd><p>Time.steps: ndarray[double]
+Compute time intervals between consecutive entries, in seconds.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>intervals</strong><span class="classifier">ndarray of float, shape (N-1,)</span></dt><dd><p>Array of time differences Δtᵢ = tᵢ₊₁ – tᵢ, expressed in seconds.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacekernel.time.Time.to_astropy">
+<span class="sig-prename descclassname"><span class="pre">Time.</span></span><span class="sig-name descname"><span class="pre">to_astropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">aspy_Time</span></span></span><a class="headerlink" href="#spacekernel.time.Time.to_astropy" title="Link to this definition">#</a></dt>
+<dd><p>Convert this Time to an Astropy Time object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt>astropy.time.Time</dt><dd><p>An Astropy Time instance with the same values, using the
+“datetime64” format and the current scale.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacekernel.time.Time.to_pandas">
+<span class="sig-prename descclassname"><span class="pre">Time.</span></span><span class="sig-name descname"><span class="pre">to_pandas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DatetimeIndex.html#pandas.DatetimeIndex" title="(in pandas v2.2.3)"><span class="pre">pandas.DatetimeIndex</span></a></span></span><a class="headerlink" href="#spacekernel.time.Time.to_pandas" title="Link to this definition">#</a></dt>
+<dd><p>Convert this Time to a pandas DatetimeIndex or Timestamp.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt>pandas.DatetimeIndex or pandas.Timestamp</dt><dd><p>A pandas datetime object localized to UTC. If this Time has
+more than one entry, returns a DatetimeIndex; otherwise returns
+a single Timestamp.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacekernel.time.Time.now">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Time.</span></span><span class="sig-name descname"><span class="pre">now</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#spacekernel.time.Time" title="spacekernel.time.Time"><span class="pre">Time</span></a></span></span><a class="headerlink" href="#spacekernel.time.Time.now" title="Link to this definition">#</a></dt>
+<dd><p>Construct a Time for the current UTC instant.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt>Time</dt><dd><p>A Time object representing <cite>pandas.Timestamp.utcnow()</cite> in UTC.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="spacekernel.time.Time.ut1_utc">
+<span class="sig-prename descclassname"><span class="pre">Time.</span></span><span class="sig-name descname"><span class="pre">ut1_utc</span></span><a class="headerlink" href="#spacekernel.time.Time.ut1_utc" title="Link to this definition">#</a></dt>
+<dd><p>Time.ut1_utc: ndarray[double]
+The difference UT1-UTC, a.k.a <span class="math notranslate nohighlight">\(\Delta UT\)</span> or <span class="math notranslate nohighlight">\(\Delta UT1\)</span> (in seconds)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="spacekernel.time.Time.ut1_tai">
+<span class="sig-prename descclassname"><span class="pre">Time.</span></span><span class="sig-name descname"><span class="pre">ut1_tai</span></span><a class="headerlink" href="#spacekernel.time.Time.ut1_tai" title="Link to this definition">#</a></dt>
+<dd><p>Time.ut1_tai: ndarray[double]
+The difference UT1-TAI (in seconds)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="spacekernel.time.Time.tt_ut1">
+<span class="sig-prename descclassname"><span class="pre">Time.</span></span><span class="sig-name descname"><span class="pre">tt_ut1</span></span><a class="headerlink" href="#spacekernel.time.Time.tt_ut1" title="Link to this definition">#</a></dt>
+<dd><p>Time.tt_ut1: ndarray[double]
+The difference TT-UT1, a.k.a <span class="math notranslate nohighlight">\(\Delta T\)</span> (in seconds)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="spacekernel.time.Time.tai_utc">
+<span class="sig-prename descclassname"><span class="pre">Time.</span></span><span class="sig-name descname"><span class="pre">tai_utc</span></span><a class="headerlink" href="#spacekernel.time.Time.tai_utc" title="Link to this definition">#</a></dt>
+<dd><p>Time.tai_utc: ndarray[double]
+The difference TAI-UTC, a.k.a <span class="math notranslate nohighlight">\(\Delta AT\)</span> (in seconds)</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Time (<code class="docutils literal notranslate"><span class="pre">spacekernel.time</span></code>)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="int64_from_datetime64.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">int64_from_datetime64</span></code></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spacekernel.time.Time"><code class="docutils literal notranslate"><span class="pre">Time</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#array-interface">Array Interface</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rich-comparisons">Rich Comparisons</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-slicing">Indexing &amp; Slicing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elementwise-arithmetic">Elementwise Arithmetic</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#members">Members</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spacekernel.time.Time.scale"><code class="docutils literal notranslate"><span class="pre">Time.scale</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spacekernel.time.Time.tai"><code class="docutils literal notranslate"><span class="pre">Time.tai</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spacekernel.time.Time.tt"><code class="docutils literal notranslate"><span class="pre">Time.tt</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spacekernel.time.Time.utc"><code class="docutils literal notranslate"><span class="pre">Time.utc</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spacekernel.time.Time.ut1"><code class="docutils literal notranslate"><span class="pre">Time.ut1</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spacekernel.time.Time.to_scale"><code class="docutils literal notranslate"><span class="pre">Time.to_scale()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spacekernel.time.Time.jd12"><code class="docutils literal notranslate"><span class="pre">Time.jd12</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spacekernel.time.Time.jd"><code class="docutils literal notranslate"><span class="pre">Time.jd</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spacekernel.time.Time.mjd"><code class="docutils literal notranslate"><span class="pre">Time.mjd</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spacekernel.time.Time.jyear"><code class="docutils literal notranslate"><span class="pre">Time.jyear</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spacekernel.time.Time.byear"><code class="docutils literal notranslate"><span class="pre">Time.byear</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spacekernel.time.Time.dtf"><code class="docutils literal notranslate"><span class="pre">Time.dtf</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spacekernel.time.Time.datetime64"><code class="docutils literal notranslate"><span class="pre">Time.datetime64</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spacekernel.time.Time.int64"><code class="docutils literal notranslate"><span class="pre">Time.int64</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spacekernel.time.Time.range"><code class="docutils literal notranslate"><span class="pre">Time.range()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spacekernel.time.Time.steps"><code class="docutils literal notranslate"><span class="pre">Time.steps</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spacekernel.time.Time.to_astropy"><code class="docutils literal notranslate"><span class="pre">Time.to_astropy()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spacekernel.time.Time.to_pandas"><code class="docutils literal notranslate"><span class="pre">Time.to_pandas()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spacekernel.time.Time.now"><code class="docutils literal notranslate"><span class="pre">Time.now()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spacekernel.time.Time.ut1_utc"><code class="docutils literal notranslate"><span class="pre">Time.ut1_utc</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spacekernel.time.Time.ut1_tai"><code class="docutils literal notranslate"><span class="pre">Time.ut1_tai</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spacekernel.time.Time.tt_ut1"><code class="docutils literal notranslate"><span class="pre">Time.tt_ut1</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spacekernel.time.Time.tai_utc"><code class="docutils literal notranslate"><span class="pre">Time.tai_utc</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/contents/api_reference/time/Time.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__center">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, Rafael R. L. Benevides.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

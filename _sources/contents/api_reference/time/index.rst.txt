@@ -1,0 +1,74 @@
+.. _api-time:
+
+###########################
+Time (``spacekernel.time``)
+###########################
+
+.. currentmodule:: spacekernel.time
+
+.. toctree::
+    :hidden:
+
+    Time
+
+    int64_from_datetime64
+    datetime64_from_int64
+    dtf_from_datetime64
+    int64_from_dtf
+    jd12_from_dtf
+    dtf_from_jd12
+    jd_from_jd12
+    jd12_from_jd
+    mjd_from_jd
+    jd_from_mjd
+    byear_from_jd12
+    jd12_from_byear
+    jyear_from_jd12
+    jd12_from_jyear
+
+    tai_from_tt
+    tt_from_tai
+    utc_from_tai
+    tai_from_utc
+    ut1_from_utc
+    utc_from_ut1
+
+.. autosummary::
+
+    Time
+
+
+
+
+Format Conversion
+=================
+
+.. autosummary::
+
+    int64_from_datetime64
+    datetime64_from_int64
+    dtf_from_datetime64
+    int64_from_dtf
+    jd12_from_dtf
+    dtf_from_jd12
+    jd_from_jd12
+    jd12_from_jd
+    mjd_from_jd
+    jd_from_mjd
+    byear_from_jd12
+    jd12_from_byear
+    jyear_from_jd12
+    jd12_from_jyear
+
+
+Scale Conversion
+=================
+
+.. autosummary::
+
+    tai_from_tt
+    tt_from_tai
+    utc_from_tai
+    tai_from_utc
+    ut1_from_utc
+    utc_from_ut1

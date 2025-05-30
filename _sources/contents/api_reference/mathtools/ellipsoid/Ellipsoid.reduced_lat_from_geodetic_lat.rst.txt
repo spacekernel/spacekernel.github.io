@@ -1,0 +1,4 @@
+``reduced_lat_from_geodetic_lat``
+=================================
+
+.. automethod:: spacekernel.mathtools.ellipsoid.Ellipsoid.reduced_lat_from_geodetic_lat

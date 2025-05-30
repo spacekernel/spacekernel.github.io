@@ -1,0 +1,72 @@
+``Ellipsoid``
+*************
+
+.. currentmodule:: spacekernel.mathtools.ellipsoid
+
+.. autoclass:: Ellipsoid
+
+
+.. toctree::
+    :hidden:
+    :maxdepth: 1
+
+    Ellipsoid.Re
+    Ellipsoid.f
+
+    Ellipsoid.enu
+
+    Ellipsoid.reduced_lat_from_geodetic_lat
+    Ellipsoid.geodetic_lat_from_reduced_lat
+    Ellipsoid.surf_pos_from_surf_coord
+    Ellipsoid.surf_coord_from_surf_pos
+
+    Ellipsoid.solve_reduced_lat_equation
+    Ellipsoid.lla_from_pos
+    Ellipsoid.pos_from_lla
+
+    Ellipsoid.surf_pos_of_ray_first_intersection
+    Ellipsoid.aer_coords
+
+    Ellipsoid.c_reduced_lat_from_geodetic_lat
+    Ellipsoid.c_geodetic_lat_from_reduced_lat
+
+Attributes
+==========
+
+.. list-table::
+
+    *   - :attr:`Re <spacekernel.mathtools.ellipsoid.Ellipsoid.Re>`
+        - Ellipsoid equatorial radius (in meters).
+    *   - :attr:`f <spacekernel.mathtools.ellipsoid.Ellipsoid.f>`
+        - The flattening factor of the ellipsoid. Between [0.0, 1.0).
+
+
+Methods
+=======
+
+.. autosummary::
+
+    Ellipsoid.enu
+    Ellipsoid.reduced_lat_from_geodetic_lat
+    Ellipsoid.geodetic_lat_from_reduced_lat
+    Ellipsoid.surf_pos_from_surf_coord
+    Ellipsoid.surf_coord_from_surf_pos
+    Ellipsoid.solve_reduced_lat_equation
+    Ellipsoid.lla_from_pos
+    Ellipsoid.pos_from_lla
+    Ellipsoid.surf_pos_of_ray_first_intersection
+    Ellipsoid.aer_coords
+
+C-level Methods
+===============
+
+.. autosummary::
+
+    Ellipsoid.c_reduced_lat_from_geodetic_lat
+
+.. list-table::
+
+   * - :c:func:`c_reduced_lat_from_geodetic_lat <Ellipsoid.c_reduced_lat_from_geodetic_lat>`
+     - Compute the reduced (parametric) latitude β from a geodetic latitude φ.
+   * - :c:func:`c_geodetic_lat_from_reduced_lat <Ellipsoid.c_geodetic_lat_from_reduced_lat>`
+     - Inverse: geodetic latitude φ from reduced latitude β.

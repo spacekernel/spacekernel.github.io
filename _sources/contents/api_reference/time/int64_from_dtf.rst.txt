@@ -1,0 +1,7 @@
+``int64_from_dtf``
+==================
+
+.. currentmodule:: spacekernel.time
+
+.. autofunction:: int64_from_dtf
+        

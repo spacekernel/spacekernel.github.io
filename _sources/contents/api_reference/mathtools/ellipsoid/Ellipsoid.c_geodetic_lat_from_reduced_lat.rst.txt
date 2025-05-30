@@ -1,0 +1,32 @@
+``c_geodetic_lat_from_reduced_lat``
+===================================
+
+.. c:function:: double Ellipsoid.c_geodetic_lat_from_reduced_lat(double reduced_lat)
+
+Compute the geodetic latitude :math:`\phi` from a reduced (parametric) latitude :math:`\beta`.
+
+.. math::
+    \phi = \arctan\!\Bigl(\frac{\tan\beta}{1 - f}\Bigr)
+
+
+All angles are in radians (SI).
+
+:param reduced_lat: 
+    Reduced (parametric) latitude :math:`\beta` in radians.
+
+:returns: 
+    Geodetic latitude :math:`\phi` in radians.
+
+:rtype: 
+    float
+
+
+.. seealso::
+    :c:func:`c_reduced_lat_from_geodetic_lat <Ellipsoid.c_reduced_lat_from_geodetic_lat>`
+        Forward transform (β from φ).
+
+    :meth:`geodetic_lat_from_reduced_lat <Ellipsoid.geodetic_lat_from_reduced_lat>` 
+        Vectorized Python wrapper.
+
+.. note::
+    Releases the GIL and uses a low-level C implementation for speed.

@@ -1,0 +1,4 @@
+``aer_coords``
+==============
+
+.. automethod:: spacekernel.mathtools.ellipsoid.Ellipsoid.aer_coords

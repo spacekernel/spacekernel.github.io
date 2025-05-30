@@ -1,0 +1,7 @@
+``jd_from_mjd``
+===============
+
+.. currentmodule:: spacekernel.time
+
+.. autofunction:: jd_from_mjd
+        

@@ -1,0 +1,7 @@
+********************
+``update_bulletins``
+********************
+
+.. currentmodule:: spacekernel.iers
+
+.. autofunction:: update_bulletins

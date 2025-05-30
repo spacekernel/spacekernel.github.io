@@ -1,0 +1,7 @@
+``int64_from_datetime64``
+=========================
+
+.. currentmodule:: spacekernel.time
+
+.. autofunction:: int64_from_datetime64
+        
