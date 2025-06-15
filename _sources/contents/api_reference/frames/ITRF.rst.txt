@@ -1,0 +1,27 @@
+********
+``ITRF``
+********
+
+.. currentmodule:: spacekernel.frames
+
+.. autodata:: ITRF
+
+.. currentmodule:: spacekernel.frames.frames
+
+Summary
+=======
+
+.. autosummary::
+
+    _ITRF.to_GCRF
+    _ITRF.to_TEME
+
+
+Methods
+=======
+
+
+.. automethod:: _ITRF.to_GCRF
+.. automethod:: _ITRF.to_TEME
+
+

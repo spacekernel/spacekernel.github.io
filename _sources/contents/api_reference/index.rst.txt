@@ -13,5 +13,8 @@ API Reference
     mathtools/index
     iers/index
     time/index
+    frames/index
+    state/index
+    bodies/index
 
 

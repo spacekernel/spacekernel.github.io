@@ -1,0 +1,7 @@
+*********
+``State``
+*********
+
+.. currentmodule:: spacekernel.state
+
+.. autoclass:: State

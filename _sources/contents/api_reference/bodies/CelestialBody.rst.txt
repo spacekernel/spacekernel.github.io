@@ -1,0 +1,20 @@
+#################
+``CelestialBody``
+#################
+
+.. currentmodule:: spacekernel.bodies
+
+.. autoclass:: CelestialBody
+
+
+.. autosummary::
+
+    CelestialBody.r_GCRF
+    CelestialBody.v_GCRF
+    CelestialBody.ur_GCRF
+
+
+
+.. autoattribute:: CelestialBody.r_GCRF
+.. autoattribute:: CelestialBody.v_GCRF
+.. autoattribute:: CelestialBody.ur_GCRF

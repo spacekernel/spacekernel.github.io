@@ -1,0 +1,25 @@
+********
+``TEME``
+********
+
+.. currentmodule:: spacekernel.frames
+
+.. autodata:: TEME
+
+.. currentmodule:: spacekernel.frames.frames
+
+Summary
+=======
+
+.. autosummary::
+
+    _TEME.to_ITRF
+
+
+Methods
+=======
+
+
+.. automethod:: _TEME.to_ITRF
+
+

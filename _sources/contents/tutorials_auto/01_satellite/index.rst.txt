@@ -1,0 +1,45 @@
+
+
+.. _sphx_glr_contents_tutorials_auto_01_satellite:
+
+**********
+Satellites
+**********
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="It is often the case that an antenna has been tested at a frequency and samples of its fields are collected in several different directions. In this context, this tutorial will help you on how to handle this kind of data and use AFTK tools to visualise it.">
+
+.. only:: html
+
+  .. image:: /contents/tutorials_auto/01_satellite/images/thumb/sphx_glr_01_plot_sat_propagation_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_contents_tutorials_auto_01_satellite_01_plot_sat_propagation.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Satellite Propagation</div>
+    </div>
+
+
+.. thumbnail-parent-div-close
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /contents/tutorials_auto/01_satellite/01_plot_sat_propagation
+

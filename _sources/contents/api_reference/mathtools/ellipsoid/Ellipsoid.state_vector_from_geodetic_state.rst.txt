@@ -1,0 +1,4 @@
+``state_vector_from_geodetic_state``
+====================================
+
+.. automethod:: spacekernel.mathtools.ellipsoid.Ellipsoid.state_vector_from_geodetic_state

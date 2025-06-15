@@ -1,0 +1,64 @@
+.. _api-state:
+
+################################################
+Spaceborne Object States (``spacekernel.state``)
+################################################
+
+.. currentmodule:: spacekernel.state
+
+.. toctree::
+    :hidden:
+
+    State
+    anomalies
+    sma_orp_mnm
+
+
+*********************
+Base class for States
+*********************
+
+.. autosummary::
+
+    State
+
+
+************
+State Vector
+************
+
+.. autosummary::
+
+    StateVector
+
+
+********************************
+Classical Orbital Elements (COE)
+********************************
+
+
+============================
+Conversion between anomalies
+============================
+
+.. autosummary::
+
+    eca_from_mea
+    mea_from_eca
+    tra_from_eca
+    eca_from_tra
+    tra_from_mea
+    mea_from_tra
+
+
+
+======================
+Conversion from/to SMA
+======================
+
+.. autosummary::
+
+    orp_from_sma
+    sma_from_orp
+    mnm_from_sma
+    sma_from_mnm

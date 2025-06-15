@@ -1,0 +1,14 @@
+###################
+Orbit Determination
+###################
+
+
+.. code-block:: python
+
+    from spacekernel import Satellite, Time, TLE
+
+
+    sat = Satellite(time, line1 = ..., line2= ...)
+
+    sv_gcrf = sat.sv
+    sv_itrf = sat.sv.itrf

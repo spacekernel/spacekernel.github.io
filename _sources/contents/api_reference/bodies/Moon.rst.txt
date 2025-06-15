@@ -1,0 +1,26 @@
+########
+``Moon``
+########
+
+.. currentmodule:: spacekernel.bodies
+
+.. autoclass:: Moon
+
+.. autosummary::
+
+    Moon.GM_JPL2021
+    Moon.GM_SEI1992
+    Moon.GM
+    Moon.Re_SEI1992
+    Moon.Re
+
+Members
+=======
+
+All values are in SI
+
+.. autoattribute:: Moon.GM_JPL2021
+.. autoattribute:: Moon.GM_SEI1992
+.. autoattribute:: Moon.GM
+.. autoattribute:: Moon.Re_SEI1992
+.. autoattribute:: Moon.Re

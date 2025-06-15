@@ -1,0 +1,15 @@
+.. _api-anomalies:
+
+############################
+Conversion between anomalies
+############################
+
+
+.. currentmodule:: spacekernel.state
+
+.. autofunction:: eca_from_mea
+.. autofunction:: mea_from_eca
+.. autofunction:: tra_from_eca
+.. autofunction:: eca_from_tra
+.. autofunction:: tra_from_mea
+.. autofunction:: mea_from_tra

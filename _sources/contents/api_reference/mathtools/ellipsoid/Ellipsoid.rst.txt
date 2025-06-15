@@ -24,6 +24,9 @@
     Ellipsoid.lla_from_pos
     Ellipsoid.pos_from_lla
 
+    Ellipsoid.geodetic_state_from_state_vector
+    Ellipsoid.state_vector_from_geodetic_state
+
     Ellipsoid.surf_pos_of_ray_first_intersection
     Ellipsoid.aer_coords
 
@@ -54,6 +57,8 @@ Methods
     Ellipsoid.solve_reduced_lat_equation
     Ellipsoid.lla_from_pos
     Ellipsoid.pos_from_lla
+    Ellipsoid.geodetic_state_from_state_vector
+    Ellipsoid.state_vector_from_geodetic_state
     Ellipsoid.surf_pos_of_ray_first_intersection
     Ellipsoid.aer_coords
 

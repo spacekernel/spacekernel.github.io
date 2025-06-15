@@ -1,0 +1,28 @@
+#######
+``Sun``
+#######
+
+.. currentmodule:: spacekernel.bodies
+
+.. autoclass:: Sun
+
+.. autosummary::
+
+    Sun.GM_JPL2021
+    Sun.GM_SEI1992
+    Sun.GM
+    Sun.Re_SEI1992
+    Sun.Re
+
+Members
+=======
+
+All values are in SI
+
+.. autoattribute:: Sun.GM_JPL2021
+.. autoattribute:: Sun.GM_IAU2015
+.. autoattribute:: Sun.GM_SEI1992
+.. autoattribute:: Sun.GM
+.. autoattribute:: Sun.Re_IAU2015
+.. autoattribute:: Sun.Re_SEI1992
+.. autoattribute:: Sun.Re

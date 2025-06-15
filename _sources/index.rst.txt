@@ -12,12 +12,12 @@ SpaceKernel
    :maxdepth: 1
 
    contents/getting_started/__main
-   contents/tutorials/__main
+   contents/tutorials_auto/index
    contents/user_guide/__main
    contents/api_reference/index
+   contents/theory/index
 
 An open-source, BSD-3–licensed `Python <https://www.python.org>`_ framework delivering optimized, modular components for orbit propagation, spacecraft maneuver modeling, and mission-level analysis.
-
 
 *******
 Install
@@ -109,3 +109,10 @@ Learn
             :click-parent:
 
             To the API reference
+
+
+***************
+Current version
+***************
+
+|version|

@@ -7,7 +7,7 @@ User Guide
 ##########
 
 
-Learn how Jangada Works! Explore the user guide, where you'll find in-depth explanation and best practices.
+.. Learn how Jangada Works! Explore the user guide, where you'll find in-depth explanation and best practices.
 
 
 .. toctree::

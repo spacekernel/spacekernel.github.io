@@ -1,0 +1,35 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+
+
+
+\begin{document}
+    % Set the main 3D coordinate system angles
+    \tdplotsetmaincoords{60}{45}
+
+    \begin{tikzpicture}[tdplot_main_coords, scale=2, gray]
+
+        % Draw axes
+        \draw[thick,->] (0,0,0) -- (1.2,0,0) node[anchor=west]{$x$};
+        \draw[thick,->] (0,0,0) -- (0,1.2,0) node[anchor=south]{$y$};
+        \draw[thick,->] (0,0,0) -- (0,0,1.2) node[anchor=south]{$z$};
+
+        % Draw ellipsoid: x^2/a^2 + y^2/b^2 + z^2/c^2 = 1
+        % a = 1, b = 0.7, c = 0.4 (axes lengths)
+        \draw[fill=blue!10, opacity=0.6] plot [domain=0:360, variable=\t, samples=60]
+        ({cos(\t)},{0.7*sin(\t)},0);
+
+        \foreach \phi in {0,30,...,180} {
+        \draw[opacity=0.5]
+            plot [domain=0:360, variable=\theta, samples=60]
+            ({cos(\theta)*sin(\phi)},{0.7*sin(\theta)*sin(\phi)},{0.4*cos(\phi)});
+        }
+        \foreach \theta in {0,30,...,150} {
+        \draw[opacity=0.5]
+            plot [domain=0:180, variable=\phi, samples=60]
+            ({cos(\theta)*sin(\phi)},{0.7*sin(\theta)*sin(\phi)},{0.4*cos(\phi)});
+        }
+
+    \end{tikzpicture}
+\end{document}

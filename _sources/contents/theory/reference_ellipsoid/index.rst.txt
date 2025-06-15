@@ -1,0 +1,388 @@
+###################
+Reference Ellipsoid
+###################
+
+
+The reference ellipsoid is a mathematically defined surface that approximates
+the shape of the Earth (or another planetary body) as an oblate spheroid.
+Unlike a perfect sphere, the Earth is slightly flattened at the poles and
+bulged at the equator due to its rotation. The reference ellipsoid provides a
+simple, standardized model for representing the Earth's size and shape, serving
+as the foundation for geodetic calculations, mapping, and satellite navigation
+systems. By specifying parameters such as the equatorial radius :math:`\Req`
+and flattening :math:`\flattening`, the reference ellipsoid enables precise
+definitions of geographic coordinates, altitudes, and distances on or near the
+Earth's surface.
+
+The reference ellipsoid can be literally thought as an oblate sphere. This
+geometric flattening can be mathematically represented by scaling the z-axis of
+a sphere of radius :math:`\Req` by the factor :math:`\frac{\Rpo}{\Req}`, where
+:math:`\Rpo` denotes the polar radius of the ellipsoid. In other words, the
+transformation from a sphere to an ellipsoid can be expressed as a linear
+mapping, where only the polar (:math:`z`-axis) coordinate is compressed
+relative to the equatorial plane. The following equation illustrates this
+transformation:
+
+.. math::
+
+    \PosEll
+    =
+    \begin{bmatrix}
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & \frac{\Rpo}{\Req}
+    \end{bmatrix}
+    \PosSph.
+
+
+Here, :math:`\PosSph` is a position vector on the sphere and :math:`\PosEll` is the corresponding point on the ellipsoid. This simple scaling effectively "squashes" the sphere along its axis of rotation, creating the oblate ellipsoidal shape that more accurately models the Earth’s surface.
+
+
+Parametrization
+***************
+
+.. math::
+    :label: eq-latred-latgeo
+
+    \tan\latRed = \pare{1 - \flattening} \tan\lat
+
+
+Cartesian/Geodetic Coordinates Conversions
+******************************************
+
+
+.. math::
+
+    \Req
+    \begin{bmatrix}
+        \cos\lon \cos\latRed \\
+        \sin\lon \cos\latRed \\
+        \pare{1 - \flattening}\sin\beta
+    \end{bmatrix}
+    +
+    \frac{
+        h
+    }{
+        \sqrt{
+            1
+            -
+            \pare{2\flattening - \flattening^2}
+            \cos^2\latRed
+        }
+    }
+    \begin{bmatrix}
+        \pare{1 - \flattening}\cos\lon \cos\latRed \\
+        \pare{1 - \flattening}\sin\lon \cos\latRed \\
+        \sin\beta
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        x\\
+        y\\
+        z
+    \end{bmatrix}
+
+
+Which can be rewritten as the following system of coupled equations:
+
+.. math::
+    :label: eq-position-x
+
+    \pare{
+        \Req
+        +
+        \frac{
+            \altitude
+            \pare{1 - \flattening}
+        }{
+            \sqrt{
+                1
+                -
+                \pare{2\flattening - \flattening^2}
+                \cos^2\latRed
+            }
+        }
+    }
+    \cos\lon \cos\latRed
+    =
+    x
+
+.. math::
+    :label: eq-position-y
+
+    \pare{
+        \Req
+        +
+        \frac{
+            \altitude
+            \pare{1 - \flattening}
+        }{
+            \sqrt{
+                1
+                -
+                \pare{2\flattening - \flattening^2}
+                \cos^2\latRed
+            }
+        }
+    }
+    \sin\lon \cos\latRed
+    =
+    y
+
+.. math::
+    :label: eq-position-z
+
+    \pare{
+        \Rpo
+        +
+        \frac{
+            \altitude
+        }{
+            \sqrt{
+                1
+                -
+                \pare{2\flattening - \flattening^2}
+                \cos^2\latRed
+            }
+        }
+    }
+    \sin\latRed
+    =
+    z
+
+
+From :eq:`eq-position-x` and :eq:`eq-position-y`, the longitude is determined as
+
+.. math::
+    :label: eq-longitude
+
+    \lon = \arctanTWO\pare{y, x}.
+
+Moreover, those equations can be even combined to remove the longitude and yield
+
+.. math::
+    :label: eq-position-s
+
+    \pare{
+        \Req
+        +
+        \frac{
+            \altitude \pare{1 - \flattening}
+        }{
+            \sqrt{
+                1
+                -
+                \pare{2\flattening - \flattening^2}
+                \cos^2\latRed
+            }
+        }
+    }
+    \cos\latRed
+    =
+    \sqrt{x^2 + y^2}
+
+Equations :eq:`eq-position-z` and :eq:`eq-position-s` will then be used to
+retrieve :math:`\latRed` and :math:`alt`. Initially, from :eq:`eq-position-z`
+note that:
+
+.. math::
+
+    \altitude
+    =
+    \frac{z}{\sin\latRed}
+    -
+    \Rpo
+
+Thus, :eq:`eq-position-s` becomes
+
+.. math::
+
+    \pare{
+        \Req
+        +
+        \frac{z}{\sin\latRed} \pare{1 - \flattening}
+        -
+        \Rpo \pare{1 - \flattening}
+    }
+    \cos\latRed
+    =
+    \sqrt{x^2 + y^2}
+
+
+.. math::
+
+    \sin\latRed
+    \cos\latRed
+    -
+    A
+    \sin\latRed
+    +
+    B
+    \cos\latRed
+    =
+    0
+
+where :math:`A = \frac{\sqrt{x^2 + y^2}}{\Req - \Rpo\pare{1 - \flattening}}` and
+:math:`B = \frac{z\pare{1 - \flattening}}{\Req - \Rpo\pare{1 - \flattening}}`.
+
+
+Cartesian/Geodetic State Conversions
+************************************
+
+.. math::
+
+    \dot{\lon}
+    =
+    \frac{
+        x\dot{y} - y\dot{x}
+    }{
+        x^2 + y^2
+    }
+
+:eq:`eq-position-z` and :eq:`eq-position-s` are written as
+
+.. math::
+
+    \rHor\pare{\latRed, \alt}\cos\latRed &= \sqrt{x^2 + y^2}
+    \\[2mm]
+    \rVer\pare{\latRed, \alt}\sin\latRed &= z
+
+where:
+
+.. math::
+
+    \rHor\pare{\latRed, \alt}
+    &=
+    \Req + \pare{1-\flattening}\aux\pare{\latRed} \alt
+    \\[2mm]
+    \rVer\pare{\latRed, \alt}
+    &=
+    \Rpo + \aux\pare{\latRed} \alt
+    \\[2mm]
+    \aux\pare{\latRed}
+    &=
+    \frac{
+        1
+    }{
+        \sqrt{
+            1
+            -
+            \pare{2\flattening - \flattening^2}
+            \cos^2\latRed
+        }
+    }
+
+
+
+.. math::
+
+    \pare{
+        \PartialDerivative{\rHor}{\latRed}\pare{\latRed, \alt}\
+        \dot{\latRed}
+        +
+        \PartialDerivative{\rHor}{\alt}\pare{\latRed, \alt}\
+        \dot{\alt}
+    }
+    \cos\latRed
+    -
+    \rHor\pare{\latRed, \alt}
+    \sin\latRed\
+    \dot{\latRed}
+    &=
+    \frac{
+        x\dot{x} + y\dot{y}
+    }{
+        \sqrt{x^2 + y^2}
+    }
+    \\[3mm]
+    \pare{
+        \PartialDerivative{\rVer}{\latRed}\pare{\latRed, \alt}\
+        \dot{\latRed}
+        +
+        \PartialDerivative{\rVer}{\alt}\pare{\latRed, \alt}\
+        \dot{\alt}
+    }
+    \sin\latRed
+    +
+    \rVer\pare{\latRed, \alt}
+    \cos\latRed\
+    \dot{\latRed}
+    &=
+    \dot{z}
+
+
+.. math::
+
+    \begin{bmatrix}
+        \PartialDerivative{\rHor}{\latRed}\pare{\latRed, \alt}
+        \cos\latRed
+        -
+        \rHor\pare{\latRed, \alt}
+        \sin\latRed\
+        &
+        \PartialDerivative{\rHor}{\alt}\pare{\latRed, \alt}
+        \cos\latRed
+        \\[3mm]
+        \PartialDerivative{\rVer}{\latRed}\pare{\latRed, \alt}
+        \sin\latRed
+        +
+        \rVer\pare{\latRed, \alt}
+        \cos\latRed
+        &
+        \PartialDerivative{\rVer}{\alt}\pare{\latRed, \alt}
+        \sin\latRed
+    \end{bmatrix}
+    \begin{bmatrix}
+        \dot{\latRed}
+        \\[3mm]
+        \dot{\alt}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        \frac{
+            x\dot{x} + y\dot{y}
+        }{
+            \sqrt{x^2 + y^2}
+        }
+        \\[3mm]
+        \dot{z}
+    \end{bmatrix}
+
+
+
+.. math::
+
+    \begin{bmatrix}
+        \pare{1-\flattening}\aux^\prime\pare{\latRed} \alt
+        \cos\latRed
+        -
+        \rHor\pare{\latRed, \alt}
+        \sin\latRed\
+        &
+        \pare{1-\flattening}\aux\pare{\latRed}
+        \cos\latRed
+        \\[3mm]
+        \aux^\prime\pare{\latRed} \alt
+        \sin\latRed
+        +
+        \rVer\pare{\latRed, \alt}
+        \cos\latRed
+        &
+        \aux\pare{\latRed}
+        \sin\latRed
+    \end{bmatrix}
+    \begin{bmatrix}
+        \dot{\latRed}
+        \\[3mm]
+        \dot{\alt}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        \frac{
+            x\dot{x} + y\dot{y}
+        }{
+            \sqrt{x^2 + y^2}
+        }
+        \\[3mm]
+        \dot{z}
+    \end{bmatrix}

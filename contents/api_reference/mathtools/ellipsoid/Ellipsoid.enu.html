@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>enu &#8212; SpaceKernel 0.1.0-dev0</title>
+    <title>enu &#8212; SpaceKernel 0.1.0-dev5</title>
   
   
   
@@ -33,6 +33,10 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/style.css?v=35749eb2" />
   
@@ -42,13 +46,14 @@
   <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../../_static/documentation_options.js?v=4abeebbb"></script>
+    <script src="../../../../_static/documentation_options.js?v=12b77505"></script>
     <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../../_static/copybutton.js?v=4ea706d9"></script>
     <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"loader": {"load": ["[tex]/upgreek"]}, "tex": {"packages": {"[+]": ["upgreek"]}, "macros": {"itrf": "{\\mathrm{ITRF}}", "hor": "{\\mathrm{hor}}", "ver": "{\\mathrm{ver}}", "bmrm": ["\\boldsymbol{\\mathrm{#1}}", 1], "bmsf": ["\\boldsymbol{\\mathsf{#1}}", 1], "pare": ["\\left(#1\\right)", 1], "bracket": ["\\left[#1\\right]", 1], "floor": ["\\left\\lfloor#1\\right\\rfloor", 1], "norm": ["\\left\\|#1\\right\\|", 1], "EV": ["\\left\\langle#1\\right\\rangle", 1], "cov": ["\\mathrm{cov}\\pare{#1}", 1], "bias": ["\\mathrm{bias}\\pare{#1}", 1], "mse": ["\\mathrm{mse}\\pare{#1}", 1], "trace": ["\\mathrm{tra}\\pare{#1}", 1], "arctanTWO": "\\mathrm{arctan2}", "eye": ["\\mathbf{I}_{#1}", 1], "mzero": ["\\mathbf{0}_{#1}", 1], "abs": ["\\left|#1\\right|", 1], "Natural": "\\mathbb{N}", "Real": "\\mathbb{R}", "Complex": "\\mathbb{C}", "iu": "j", "PartialDerivative": ["\\frac{\\partial #1}{\\partial #2}", 2], "Time": "t", "Pos": "\\boldsymbol{r}", "rHor": "\\Pos_\\hor", "rVer": "\\Pos_\\ver", "aux": "g", "Req": "R_{\\mathrm{e}}", "Rpo": "R_{\\mathrm{p}}", "flattening": "f", "PosSph": "\\Pos_{\\mathrm{sph}}", "PosEll": "\\Pos_{\\mathrm{ell}}", "lon": "\\lambda", "lat": "\\phi", "latRed": "\\beta", "altitude": "h", "alt": "h", "State": "\\bmrm{x}", "StateDot": "\\dot{\\State}", "TIME": "t", "FREQ": "\\nu", "POS": "\\boldsymbol{r}", "ux": "\\hat{\\boldsymbol{x}}", "uy": "\\hat{\\boldsymbol{y}}", "uz": "\\hat{\\boldsymbol{z}}", "uradius": "\\hat{\\boldsymbol{r}}", "utheta": "\\hat{\\boldsymbol{\\theta}}", "uphi": "\\hat{\\boldsymbol{\\phi}}", "MET": "\\boldsymbol{\\mathcal{E}}", "MEP": "\\boldsymbol{E}", "MEPfar": "\\MEP_{\\mathrm{far}}", "MEN": "\\boldsymbol{\\mathtt{E}}", "MEsamp": "\\boldsymbol{\\mathsf{E}}", "legendre": ["P_{#1}^{#2}", 2], "Ylm": "Y_{\\ell}^{m}", "ARPF": "\\boldsymbol{\\mathtt{E}}", "ARPFsamp": "\\widetilde{\\boldsymbol{\\mathtt{E}}}", "ARPFest": "\\widehat{\\boldsymbol{\\mathtt{E}}}", "ARPFBlock": "\\boldsymbol{\\mathsf{E}}", "ARPFBlockSamp": "\\widetilde{\\ARPFBlock}", "ARPFBlockEst": "\\widehat{\\ARPFBlock}", "noise": "\\boldsymbol{\\upvarepsilon}", "noiseBlock": "\\boldsymbol{\\varepsilon}", "R": "\\mathsf{\\boldsymbol{R}}", "qlm": "\\boldsymbol{q}_{\\ell m}", "qBlock": "\\mathsf{\\boldsymbol{q}}", "qBlockEst": "\\widehat{\\qBlock}", "P": "\\mathsf{\\boldsymbol{P}}", "K": "\\mathsf{\\boldsymbol{K}}", "residual": "\\mathsf{\\boldsymbol{r}}", "residualEnergy": "\\mathscr{E}", "rre": "\\rho", "MHT": "\\boldsymbol{\\mathcal{H}}", "MHP": "\\boldsymbol{H}", "MHPfar": "\\MHP_{\\mathrm{far}}", "MHN": "\\boldsymbol{\\mathtt{H}}", "Psilm": "\\boldsymbol{\\Psi}_{\\ell m}", "PsilmRad": "\\boldsymbol{\\Psi}_{\\ell m}^{\\mathrm{rad}}", "PsilmRea": "\\boldsymbol{\\Psi}_{\\ell m}^{\\mathrm{rea}}", "PSI": "\\boldsymbol{\\mathsf{\\Psi}}", "PSIRad": "\\PSI^{\\mathrm{rad}}", "PSIRea": "\\PSI^{\\mathrm{rea}}", "Tlm": "\\boldsymbol{T}_{\\ell m}", "TBlock": "\\mathsf{\\boldsymbol{T}}", "UPSILON": "\\mathsf{\\boldsymbol{\\Upsilon}}", "Psilmfar": "\\boldsymbol{\\Psi}_{\\ell m}^{\\mathrm{rad}}", "Psilmnear": "\\boldsymbol{\\Psi}_{\\ell m}^{\\mathrm{rea}}", "blockPsi": "\\boldsymbol{\\mathsf{\\Psi}}", "blockPsifar": "\\boldsymbol{\\mathsf{\\Psi}}^{\\mathrm{rad}}", "blockPsinear": "\\boldsymbol{\\mathsf{\\Psi}}^{\\mathrm{rea}}", "blockT": "\\mathsf{\\boldsymbol{T}}", "blockq": "\\mathsf{\\boldsymbol{q}}", "plm": "\\boldsymbol{p}_{\\ell m}", "transpose": "^{\\mathrm{T}}", "hermit": "^{\\mathrm{H}}", "inverse": "^{-1}", "conjugate": "^*"}, "tags": "ams"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'contents/api_reference/mathtools/ellipsoid/Ellipsoid.enu';</script>
     <link rel="icon" href="../../../../_static/spacekernel.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
@@ -57,7 +62,7 @@
     <link rel="prev" title="f" href="Ellipsoid.f.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="0.1.0-dev0" />
+  <meta name="docsearch:version" content="0.1.0-dev5" />
   </head>
   
   
@@ -149,7 +154,7 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../../tutorials/__main.html">
+  <a class="nav-link nav-internal" href="../../../tutorials_auto/index.html">
     Tutorials
   </a>
 </li>
@@ -165,6 +170,13 @@
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="../../index.html">
     API Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../theory/index.html">
+    Background Theory
   </a>
 </li>
 
@@ -277,7 +289,7 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../../tutorials/__main.html">
+  <a class="nav-link nav-internal" href="../../../tutorials_auto/index.html">
     Tutorials
   </a>
 </li>
@@ -293,6 +305,13 @@
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="../../index.html">
     API Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../theory/index.html">
+    Background Theory
   </a>
 </li>
 
@@ -366,6 +385,8 @@
 <li class="toctree-l4"><a class="reference internal" href="Ellipsoid.solve_reduced_lat_equation.html"><code class="docutils literal notranslate"><span class="pre">solve_reduced_lat_equation</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="Ellipsoid.lla_from_pos.html"><code class="docutils literal notranslate"><span class="pre">lla_from_pos</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="Ellipsoid.pos_from_lla.html"><code class="docutils literal notranslate"><span class="pre">pos_from_lla</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="Ellipsoid.geodetic_state_from_state_vector.html"><code class="docutils literal notranslate"><span class="pre">geodetic_state_from_state_vector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="Ellipsoid.state_vector_from_geodetic_state.html"><code class="docutils literal notranslate"><span class="pre">state_vector_from_geodetic_state</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="Ellipsoid.surf_pos_of_ray_first_intersection.html"><code class="docutils literal notranslate"><span class="pre">surf_pos_of_ray_first_intersection</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="Ellipsoid.aer_coords.html"><code class="docutils literal notranslate"><span class="pre">aer_coords</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="Ellipsoid.c_reduced_lat_from_geodetic_lat.html"><code class="docutils literal notranslate"><span class="pre">c_reduced_lat_from_geodetic_lat</span></code></a></li>
@@ -407,6 +428,26 @@
 <li class="toctree-l2"><a class="reference internal" href="../../time/tai_from_utc.html"><code class="docutils literal notranslate"><span class="pre">tai_from_utc</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../time/ut1_from_utc.html"><code class="docutils literal notranslate"><span class="pre">ut1_from_utc</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../time/utc_from_ut1.html"><code class="docutils literal notranslate"><span class="pre">utc_from_ut1</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../frames/index.html">Reference Frames (<code class="docutils literal notranslate"><span class="pre">spacekernel.frames</span></code>)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../frames/Frame.html"><code class="docutils literal notranslate"><span class="pre">Frame</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../frames/GCRF.html"><code class="docutils literal notranslate"><span class="pre">GCRF</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../frames/ITRF.html"><code class="docutils literal notranslate"><span class="pre">ITRF</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../frames/TEME.html"><code class="docutils literal notranslate"><span class="pre">TEME</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../frames/ENU.html"><code class="docutils literal notranslate"><span class="pre">ENU</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../state/index.html">Spaceborne Object States (<code class="docutils literal notranslate"><span class="pre">spacekernel.state</span></code>)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../state/State.html"><code class="docutils literal notranslate"><span class="pre">State</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../state/anomalies.html">Conversion between anomalies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../state/sma_orp_mnm.html">Conversion from/to SMA</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../bodies/index.html">Celestial Bodies (<code class="docutils literal notranslate"><span class="pre">spacekernel.bodies</span></code>)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../bodies/CelestialBody.html"><code class="docutils literal notranslate"><span class="pre">CelestialBody</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bodies/Moon.html"><code class="docutils literal notranslate"><span class="pre">Moon</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bodies/Sun.html"><code class="docutils literal notranslate"><span class="pre">Sun</span></code></a></li>
 </ul>
 </details></li>
 </ul>
@@ -626,7 +667,7 @@ Up (radial) unit‐vector components [x, y, z].</p></li>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.3.0.
     <br/>
   </p>
 </div>

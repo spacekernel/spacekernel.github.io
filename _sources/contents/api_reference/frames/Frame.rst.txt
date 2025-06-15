@@ -1,0 +1,33 @@
+*********
+``Frame``
+*********
+
+.. currentmodule:: spacekernel.frames
+
+.. autoclass:: Frame
+
+
+.. autosummary::
+
+    Frame.__class_getitem__
+    Frame.__hash__
+    Frame.is_frame
+    Frame.name
+    Frame.get_route
+    Frame.transforms
+    Frame.transform_to
+    Frame.register_transform
+    Frame.remove_transform
+
+
+.. automethod:: Frame.__class_getitem__
+.. automethod:: Frame.__hash__
+.. automethod:: Frame.is_frame
+.. automethod:: Frame.name
+.. automethod:: Frame.get_route
+.. automethod:: Frame.transforms
+.. automethod:: Frame.transform_to
+.. automethod:: Frame.register_transform
+.. automethod:: Frame.remove_transform
+
+

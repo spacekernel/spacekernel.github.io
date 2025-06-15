@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>EOP &#8212; SpaceKernel 0.1.0-dev0</title>
+    <title>EOP &#8212; SpaceKernel 0.1.0-dev5</title>
   
   
   
@@ -33,6 +33,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/style.css?v=35749eb2" />
   
@@ -42,7 +46,7 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../_static/documentation_options.js?v=4abeebbb"></script>
+    <script src="../../../_static/documentation_options.js?v=12b77505"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -56,7 +60,7 @@
     <link rel="prev" title="IERS (spacekernel.iers)" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="0.1.0-dev0" />
+  <meta name="docsearch:version" content="0.1.0-dev5" />
   </head>
   
   
@@ -148,7 +152,7 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../tutorials/__main.html">
+  <a class="nav-link nav-internal" href="../../tutorials_auto/index.html">
     Tutorials
   </a>
 </li>
@@ -164,6 +168,13 @@
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="../index.html">
     API Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../theory/index.html">
+    Background Theory
   </a>
 </li>
 
@@ -276,7 +287,7 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../tutorials/__main.html">
+  <a class="nav-link nav-internal" href="../../tutorials_auto/index.html">
     Tutorials
   </a>
 </li>
@@ -292,6 +303,13 @@
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="../index.html">
     API Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../theory/index.html">
+    Background Theory
   </a>
 </li>
 
@@ -365,6 +383,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../mathtools/ellipsoid/Ellipsoid.solve_reduced_lat_equation.html"><code class="docutils literal notranslate"><span class="pre">solve_reduced_lat_equation</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../mathtools/ellipsoid/Ellipsoid.lla_from_pos.html"><code class="docutils literal notranslate"><span class="pre">lla_from_pos</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../mathtools/ellipsoid/Ellipsoid.pos_from_lla.html"><code class="docutils literal notranslate"><span class="pre">pos_from_lla</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mathtools/ellipsoid/Ellipsoid.geodetic_state_from_state_vector.html"><code class="docutils literal notranslate"><span class="pre">geodetic_state_from_state_vector</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mathtools/ellipsoid/Ellipsoid.state_vector_from_geodetic_state.html"><code class="docutils literal notranslate"><span class="pre">state_vector_from_geodetic_state</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../mathtools/ellipsoid/Ellipsoid.surf_pos_of_ray_first_intersection.html"><code class="docutils literal notranslate"><span class="pre">surf_pos_of_ray_first_intersection</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../mathtools/ellipsoid/Ellipsoid.aer_coords.html"><code class="docutils literal notranslate"><span class="pre">aer_coords</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../mathtools/ellipsoid/Ellipsoid.c_reduced_lat_from_geodetic_lat.html"><code class="docutils literal notranslate"><span class="pre">c_reduced_lat_from_geodetic_lat</span></code></a></li>
@@ -406,6 +426,26 @@
 <li class="toctree-l2"><a class="reference internal" href="../time/tai_from_utc.html"><code class="docutils literal notranslate"><span class="pre">tai_from_utc</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../time/ut1_from_utc.html"><code class="docutils literal notranslate"><span class="pre">ut1_from_utc</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../time/utc_from_ut1.html"><code class="docutils literal notranslate"><span class="pre">utc_from_ut1</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../frames/index.html">Reference Frames (<code class="docutils literal notranslate"><span class="pre">spacekernel.frames</span></code>)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../frames/Frame.html"><code class="docutils literal notranslate"><span class="pre">Frame</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../frames/GCRF.html"><code class="docutils literal notranslate"><span class="pre">GCRF</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../frames/ITRF.html"><code class="docutils literal notranslate"><span class="pre">ITRF</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../frames/TEME.html"><code class="docutils literal notranslate"><span class="pre">TEME</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../frames/ENU.html"><code class="docutils literal notranslate"><span class="pre">ENU</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../state/index.html">Spaceborne Object States (<code class="docutils literal notranslate"><span class="pre">spacekernel.state</span></code>)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../state/State.html"><code class="docutils literal notranslate"><span class="pre">State</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../state/anomalies.html">Conversion between anomalies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../state/sma_orp_mnm.html">Conversion from/to SMA</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../bodies/index.html">Celestial Bodies (<code class="docutils literal notranslate"><span class="pre">spacekernel.bodies</span></code>)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../bodies/CelestialBody.html"><code class="docutils literal notranslate"><span class="pre">CelestialBody</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bodies/Moon.html"><code class="docutils literal notranslate"><span class="pre">Moon</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bodies/Sun.html"><code class="docutils literal notranslate"><span class="pre">Sun</span></code></a></li>
 </ul>
 </details></li>
 </ul>
@@ -498,7 +538,7 @@ regarding their interpolation.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
-<dt><strong>mjd_utc</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a> [ <a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.double">float64</a> ]</span></dt><dd><p>Time array of the needed EOP in <a class="reference external" href="https://web.archive.org/web/20130214020649/http://tycho.usno.navy.mil/mjd.html">modified julian date</a>
+<dt><strong>mjd_utc</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a> [ <a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.double">float64</a> ]</span></dt><dd><p>Time array of the needed EOP in <a class="reference external" href="https://web.archive.org/web/20130214020649/http://tycho.usno.navy.mil/mjd.html">modified julian date</a>
 format.</p>
 </dd>
 </dl>
@@ -720,7 +760,7 @@ format.</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.3.0.
     <br/>
   </p>
 </div>

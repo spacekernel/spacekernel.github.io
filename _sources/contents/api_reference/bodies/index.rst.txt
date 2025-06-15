@@ -1,0 +1,20 @@
+.. _api-bodies:
+
+#########################################
+Celestial Bodies (``spacekernel.bodies``)
+#########################################
+
+.. currentmodule:: spacekernel.bodies
+
+.. toctree::
+    :hidden:
+
+    CelestialBody
+    Moon
+    Sun
+
+.. autosummary::
+
+    CelestialBody
+    Moon
+    Sun
